@@ -1,134 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="main-header__body main-navigation">
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a href="#">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a href="#">Фото и видео</a>
-          </li>
-          <li class="main-navigation__item">
-            <a href="#">Форма отзыва</a>
-          </li>
-          <li class="main-navigation__item">
-            <a href="#">html academy</a>
-          </li>
-        </ul>
-        <button class="main-header__button-close" type="button">x</button>
-      </nav>
-      <div class="main-header__body main-header-logo__body">
-        <a class="main-header__logo">
-          <img class="main-header__logo-image" src="#" width="#" height="#" alt="логотип сайта Седона">
-        </a>
-          <button class="main-header__button-open" type="button"></button><!--Это button или a? Если a, то почему?-->
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="main-header__body navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#">Форма отзыва</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#">html academy</a>
+        </li>
+      </ul>
+      <button class="navigation__button--close navigation__button--open" type="button">Меню</button><!--как эта кнопка будет сделана и где она находится?-->
+    </nav>
+    <div class="main-header__body logo">
+      <a class="logo__link">
+        <img class="logo__image" src="#" width="#" height="#" alt="логотип сайта Седона">
+      </a>
+    </div>
+  </header>
+  <main class="container">
+    <div class="container__body banner">Баннер</div>
+    <section class="container__body reasons">
+      <div class="reasons__intro">
+        <h1 class="reasons__intro__content reasons__intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p class="reasons__intro__content reasons__intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
-    </header>
-    <main class="container">
-      <h1 class="container__h1 visually-hidden">Туры в Седону</h1>
-      <div class="container__body container-banner__body">
-        <div class="container-banner">
-          <p class="container-banner__content welcome__content">Welcome</p>
-          <p class="container-banner__content georgeous__content">to the gorgeous</p>
-          <p class="container-banner__content sedona__content">Sedona</p>
-          <p class="container-banner__content because__content">"Because the Grand Canyon sucks!"</p>
-        </div>
+      <ul class="reasons__list">
+        <li class="reasons__item"><!--выравнивание текста по центру-->
+          <div class="reasons__description reasons--main__description"><!--reasons__description-шрифт reasons--main__description-цвет шрифта и бэкграунд-->
+            <h2 class="reasons__description__title">Настоящий городок</h2>
+            <span class="reasons__description__index-number">№1</span>
+            <p class="reasons__description__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <img class="reasons__item__image" src="#" width="#" height="#" alt="вид на стереотипный мотель Дикого Запада">
+          <ul class="reasons__item__description advantages advantages__list"><!--advantages-цвет шрифта и бэкграунд advantages__list-выравнивание-->
+            <li class="advantages__item advantages__icon--housing">
+              <h2 class="advantages__item__title">Жилье</h2>
+              <p class="advantages__item__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="advantages__item advantages__icon--souvenirs">
+              <h2 class="advantages__item__title">Сувениры</h2>
+              <p class="advantages__item__text">Не только китайского, но и местного производства!</p>
+            </li>
+            <li class="advantages__item advantages__icon--food">
+              <h2 class="advantages__item__title">Еда</h2>
+              <p class="advantages__item__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+          </ul>
+        </li>
+        <li class="reasons__item">
+          <div class="reasons__description reasons--main__description">
+            <h2 class="reasons__description__title">Там есть мост Дьявола</h2>
+            <span class="reasons__description__index-number">№2</span>
+            <p class="reason__description__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </div>
+          <img class="reason__item__image" src="#" width="#" height="#" alt="узкий каменный мостик над пропастью">
+        </li>
+        <li class="reasons__description reasons--secondary__description reasons__item">
+          <h2 class="reasons__description__title">Небольшая площадь</h2>
+          <span class="reason__description__index-number">№3</span>
+          <p class="reason__description__text">Все интересные места находятся очень близко</p>
+        </li>
+        <li class="reasons__description reasons--secondary__description reasons__item">
+          <h2 class="reasons__description__title">Красивая дорога</h2>
+          <span class="reason__description__index-number">№4</span>
+          <p class="reason__description__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+        <li class="reasons__description reasons--secondary__description reasons__item">
+          <h2 class="reasons__description__title">Мало туристов</h2>
+          <span class="reason__description__index-number">№5</span>
+          <p class="reason__description__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </li>
+      </ul>
+    </section>
+    <section class="container__body commercial">
+      <div class="commercial__content">
+        <h2 class="commercial__title">Заинтересовались?</h2>
+        <p class="commercial__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="commercial__button" href="#"></a>
       </div>
-      <section class="container__body container-reasons__section">
-        <div class="reasons-intro">
-          <p class="reasons-intro__content reasons-intro__lead">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="reasons-intro__content reasons-intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        </div>
-        <ul class="reasons__list"><!--если использовать нумерованный список, как в css сделать цифру в середине абзаца?-->
-          <li class="reasons-list__item"><!--выравнивание текста по центру-->
-            <div class="reasons-item__description main-reasons__description"><!--reasons-шрифт main-reasons-цвет шрифта и бэкграунд-->
-              <h2 class="reason-description__h2">Настоящий городок</h2>
-              <span class="reason-description__index-number">№1</span>
-              <p class="reason-description__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-            </div>
-            <img class="reason-item__image" src="#" width="#" height="#" alt="вид на стереотипный мотель Дикого Запада">
-            <ul class="reasons-item__description advantages__description advantages__list"><!--advantages__description-цвет шрифта и бэкграунд advantages__list-выравнивание-->
-              <li class="advantages-list__item advantage-housing__icon">
-                <h2 class="advantage-item__h2">Жилье</h2>
-                <p class="advantage-item__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </li>
-              <li class="advantages-list__item advantage-souvenirs__icon">
-                <h2 class="advantage-item__h2">Сувениры</h2>
-                <p class="advantage-item__text">Не только китайского, но и местного производства!</p>
-              </li>
-              <li class="advantages-list__item advantage-food__icon">
-                <h2 class="advantage-item__h2">Еда</h2>
-                <p class="advantage-item__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-            </ul>
-          </li>
-          <li class="reasons-list__item">
-            <div class="reasons-item__description main-reasons__description">
-              <h2 class="reason-description__h2">Там есть мост Дьявола</h2>
-              <span class="reason-description__index-number">№2</span>
-              <p class="reason-description__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-            </div>
-            <img class="reason-item__image" src="#" width="#" height="#" alt="узкий каменный мостик над пропастью">
-          </li>
-          <li class="reasons__description secondary-reasons__description reasons-list__item">
-            <h2 class="reason-description__h2">Небольшая площадь</h2>
-            <span class="reason-description__index-number">№3</span>
-            <p class="reason-description__text">Все интересные места находятся очень близко</p>
-          </li>
-          <li class="reasons__description secondary-reasons__description reasons-list__item">
-            <h2 class="reason-description__h2">Красивая дорога</h2>
-            <span class="reason-description__index-number">№4</span>
-            <p class="reason-description__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li class="reasons__description secondary-reasons__description reasons-list__item">
-            <h2 class="reason-description__h2">Мало туристов</h2>
-            <span class="reason-description__index-number">№5</span>
-            <p class="reason-description__text">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-        </ul>
-      </section>
-      <section class="container__body container-commercial__section">
-        <div class="container-commercial">
-          <h2 class="commercial__h2">Заинтересовались?</h2>
-          <p class="commercial__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="commercial-button" href="#"></a>
-        </div>
-      </section>
-      <div class="container__body container-map__body">
-        <img class="container__map-image" src="#" width="#" height="#" alt="карта, на которой указано местоположение Седоны">
-      </div>
-    </main>
-    <footer class="main-footer">
-      <div class="main-footer__body">
-        <span class="main-footer-hashtag__content">#visitsedona</span>
-        <ul class="social-icon__list">
-          <li class="social-icon-item">
-            <a class="social-icon-twitter" href="#">
+    </section>
+    <div class="container__body map">
+      <img class="map-image" src="#" width="#" height="#" alt="карта, на которой указано местоположение Седоны">
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__body">
+      <span class="hashtag">#visitsedona</span>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
-          <li class="social-icon-item">
-            <a class="social-icon-fb" href="#">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#">
               <span class="visually-hidden">Фэйсбук</span>
             </a>
           </li>
-          <li class="social-icon-item">
-            <a class="social-icon-Youtube" href="#">
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#">
               <span class="visually-hidden">Ютюб</span>
             </a>
           </li>
         </ul>
-        <div class="main-footer-copyright_content">
-          <p class="copyright_content">Разработано</p>
-          <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
-        </div>
       </div>
-    </footer>
-  </body>
+      <div class="copyright">
+        <p class="copyright__content">Разработано</p>
+        <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
