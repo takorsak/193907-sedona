@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Татьяна Корсакова](https://up.htmlacademy.ru/adaptive/14/user/193907).
-* Наставник: [Андрей Островский].
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
