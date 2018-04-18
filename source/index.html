@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
@@ -32,13 +34,13 @@
   <main>
     <div class="promo">Баннер</div>
     <section class="reasons">
-      <div class="page-intro">
+      <div class="page-intro page-intro--decoration">
         <h1 class="page-intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="page-intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
-      <div class="reason">
+      <div class="reason reason--decoration">
         <h2 class="reason__title">Настоящий городок</h2>
-        <span class="reason__index-number">№1</span>
+        <span class="reason__index-number">— №1 —</span>
         <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
         <img class="reason__image" src="#" width="#" height="#" alt="Вид на стереотипный мотель Дикого Запада">
       </div>
@@ -58,24 +60,30 @@
       </ul>
       <div class="reason">
         <h2 class="reason__title">Там есть мост Дьявола</h2>
-        <span class="reason__index-number">№2</span>
+        <span class="reason__index-number">— №2 —</span>
         <p class="reason__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         <img class="reason__image" src="#" width="#" height="#" alt="Узкий каменный мостик над пропастью">
       </div>
       <div class="reason reason--secondary">
-        <h2 class="reason__title">Небольшая площадь</h2>
-        <span class="reason__index-number">№3</span>
-        <p class="reason__text">Все интересные места находятся очень близко</p>
+        <div class="reason__wrapper reason__border">
+          <h2 class="reason__title">Небольшая площадь</h2>
+          <span class="reason__index-number">— №3 —</span>
+          <p class="reason__text">Все интересные места находятся очень близко</p>
+        </div>
       </div>
       <div class="reason reason--secondary">
-        <h2 class="reason__title">Красивая дорога</h2>
-        <span class="reason__index-number">№4</span>
-        <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <div class="reason__wrapper reason__border">
+          <h2 class="reason__title">Красивая дорога</h2>
+          <span class="reason__index-number">— №4 —</span>
+          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
       </div>
       <div class="reason reason--secondary">
-        <h2 class="reason__title">Мало туристов</h2>
-        <span class="reason__index-number">№5</span>
-        <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reason__wrapper">
+          <h2 class="reason__title">Мало туристов</h2>
+          <span class="reason__index-number">— №5 —</span>
+          <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
       </div>
     </section>
     <section class="commercial">
@@ -84,13 +92,11 @@
         <p class="commercial__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="commercial__link" href="#">Найти гостиницу</a>
       </div>
-      <div class="commercial__map">
-        <img class="commercial__map-image" src="#" width="#" height="#" alt="Карта, на которой указано местоположение Седоны">
-      </div>
+      <div class="commercial__map"><span class="visually-hidden">Карта, на которой указано местоположение Седоны</span></div>
     </section>
   </main>
-  <footer class="main-footer">
-    <span class="main-footer__hashtag">#visitsedona</span>
+  <footer class="page-footer">
+    <span class="page-footer__hashtag">#visitsedona</span>
     <ul class="social">
       <li class="social__item">
         <a class="social__link social__link--twitter" href="#">
