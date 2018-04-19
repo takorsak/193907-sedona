@@ -1,0 +1,137 @@
+.form {
+  margin: 0;
+  padding: 0;
+}
+
+.form__group {
+  border: none;
+
+  margin: 0;
+  padding: 0;
+  padding-left: @padding-side;
+  padding-right: @padding-side;
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
+  border-top: @border;
+  border-bottom: @border;
+}
+
+.form__group-heading {
+  text-align: center;
+
+  font-style: bold;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.form__group-title {
+  font-style: normal;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.form__field {
+  font-style: bold;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  border: 0;
+  outline: none;
+
+  padding: @padding-side;
+
+  background-color: @semi-dark;
+}
+
+.form__field::placeholder {
+  color: @text-dark;
+}
+
+.form__field::-moz-placeholder {
+  color: @text-dark;
+}
+
+.form__field::-webkit-input-placeholder {
+  color: @text-dark;
+}
+
+.form__field:-ms-input-placeholder {
+  color: @text-dark;
+}
+
+.form__field::-ms-input-placeholder {
+  color: @text-dark;
+}
+
+.form__group-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__inner {
+  margin: 0;
+  padding: 0;
+
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
+  padding-left: @padding-side;
+  padding-right: @padding-side;
+}
+
+.form__field-message {
+  width: @width;
+  min-height: 160px;
+}
+
+.form__inner label {/*почему не выравниывется вместе с остальными .form__group-heading и как выровнять по-нормальному?*/
+  margin-left: 35px;
+}
+
+.form__phone {
+  width: 58px;
+  height: 58px;
+  background: #e6e6e6;
+
+  position: relative;
+}
+
+.form__phone::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url(../img/icon-phone.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.form__email {
+  width: 58px;
+  height: 58px;
+  background: #e6e6e6;
+
+  position: relative;
+}
+
+.form__email::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 17px;
+  height: 17px;
+
+  background-image: url(../img/icon-mail.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}

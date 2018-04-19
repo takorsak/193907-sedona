@@ -1,0 +1,53 @@
+.promo-photo {
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-right: @padding-side;
+  padding-left: @padding-side;
+
+  border-bottom: @border;
+
+  text-align: left;
+}
+
+.promo-photo--border {
+  border-top: @border;
+}
+
+.promo-photo__title {
+  font-style: bold;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.promo-photo__subtitle {
+  font-style: normal;
+  line-height: 24px;
+  font-weight: 400;
+
+  text-transform: none;
+}
+
+.promo-photo__like {
+  position: relative;
+}
+
+.promo-photo__like-number {
+  margin-left: 37px;
+}
+
+.promo-photo__like::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url(../img/icon-like.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}

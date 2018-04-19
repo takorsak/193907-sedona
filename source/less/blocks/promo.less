@@ -4,18 +4,20 @@
   background-repeat: no-repeat;
 
   min-height: 390px;
+}
 
+.promo--decoration {
   position: relative;
 }
 
-.promo::after {
+.promo--decoration::after {
   content: "";
 
   position: absolute;
   top: 362px;
   left: 0px;
 
-  width: 320px;
+  width: 323px;
   height: 30px;
 
   background-image: url(../img/bg-intro-triangle-mobile.svg);
@@ -24,5 +26,22 @@
 }
 
 .promo--inner {
-  min-height: 159px;
+  min-height: 160px;
+
+  position: relative;
+}
+
+.promo--inner::after {
+  content: "";
+
+  position: absolute;
+  top: 133px;
+  left: 0px;
+
+  width: 323px;
+  height: 30px;
+
+  background-image: url(../img/bg-intro-triangle-mobile.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }

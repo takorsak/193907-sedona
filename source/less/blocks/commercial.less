@@ -3,8 +3,8 @@
 
   padding-top: 33px;
   padding-bottom: 50px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: @padding-side;
+  padding-left: @padding-side;
 }
 
 .commercial__title {
@@ -24,14 +24,6 @@
 
 .commercial__link {
   text-decoration: none;
-
-  font-style: bold;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  color: @text-light;
-
-  background-color: #81b3d2;
 }
 
 .commercial__map {
@@ -40,4 +32,14 @@
   background-repeat: no-repeat;
 
   min-height: 350px;
+}
+
+.commercial__video {
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/video-mobile@1x.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  min-height: 200px;
 }
