@@ -8,12 +8,15 @@
 
   margin: 0;
   padding: 0;
-  padding-left: @padding-side;
-  padding-right: @padding-side;
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
-  border-top: @border;
   border-bottom: @border;
+  padding-left: @padding-side;
+  padding-right: @padding-side;
+}
+
+.form__group-inner {
+  border-top: @border;
 }
 
 .form__group-heading {
@@ -57,17 +60,13 @@
 
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
-  padding-left: @padding-side;
-  padding-right: @padding-side;
+
+  text-align: center;
 }
 
 .form__field-message {
-  width: @content-width;
+  width: 240px;
   min-height: 160px;
-}
-
-.form__inner {
-  text-align: center;
 }
 
 .form__phone {
