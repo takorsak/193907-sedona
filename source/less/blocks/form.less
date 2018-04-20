@@ -19,22 +19,20 @@
 .form__group-heading {
   text-align: center;
 
-  font-style: bold;
-  font-size: @font-size;
-  line-height: @line-height;
+  font-size: @title-font-size;
+  line-height: @title-line-height;
   font-weight: 700;
 }
 
 .form__group-title {
   font-style: normal;
-  line-height: @line-height;
+  line-height: @title-line-height;
   font-weight: 400;
 }
 
 .form__field {
-  font-style: bold;
-  font-size: @font-size;
-  line-height: @line-height;
+  font-size: @placeholder-font-size;
+  line-height: @placeholder-line-height;
   font-weight: 700;
 
   border: 0;
@@ -43,26 +41,8 @@
   padding: @padding-side;
 
   background-color: @semi-dark;
-}
 
-.form__field::placeholder {
-  color: @text-dark;
-}
-
-.form__field::-moz-placeholder {
-  color: @text-dark;
-}
-
-.form__field::-webkit-input-placeholder {
-  color: @text-dark;
-}
-
-.form__field:-ms-input-placeholder {
-  color: @text-dark;
-}
-
-.form__field::-ms-input-placeholder {
-  color: @text-dark;
+  .form__field()
 }
 
 .form__group-list {
@@ -82,12 +62,12 @@
 }
 
 .form__field-message {
-  width: @width;
+  width: @content-width;
   min-height: 160px;
 }
 
-.form__inner label {/*почему не выравниывется вместе с остальными .form__group-heading и как выровнять по-нормальному?*/
-  margin-left: 35px;
+.form__inner {
+  text-align: center;
 }
 
 .form__phone {
