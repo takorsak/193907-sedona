@@ -3,25 +3,49 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="page-header">
+    <nav class="main-nav page-header__menu">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Фото и видео</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Форма отзыва</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">html academy</a>
+        </li>
+      </ul>
+      <button class="main-nav__button--close main-nav__button--open" type="button">Меню</button>
+    </nav>
+    <div class="logo page-header__logo">
+      <a class="logo__link">
+        <img class="logo__image" src="#" width="#" height="#" alt="логотип сайта Седона">
+      </a>
+    </div>
   </header>
   <main>
     <div class="promo promo--inner">Баннер</div>
     <section class="photo">
-      <div class="page-intro">
+      <div class="page-intro page-intro--inner">
         <h1 class="page-intro__title">Фото и видео</h1>
         <p class="page-intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </div>
-      <div class="promo-photo">
+      <div class="promo-photo promo-photo--border">
         <a class="promo-photo__link" href="#">
           <img class="promo-photo__image" src="#" width="#" height="#" alt="Закат с видом на шоссе и горы">
         </a>
         <span class="promo-photo__title">Неродные просторы</span>
         <span class="promo-photo__subtitle">Автор фото: Борис</span>
         <div class="promo-photo__like">
-          <span class="promo-photo__like-number">1350<"/span">
+          <span class="promo-photo__like-number">1350</span>
         </div>
       </div>
       <div class="promo-photo">
@@ -31,7 +55,7 @@
         <span class="promo-photo__title">Местная растительность</span>
         <span class="promo-photo__subtitle">Автор фото: Сергей</span>
         <div class="promo-photo__like">
-          <span class="promo-photo__like-number">143<"/span">
+          <span class="promo-photo__like-number">143</span>
         </div>
       </div>
       <div class="promo-photo">
@@ -41,7 +65,7 @@
         <span class="promo-photo__title">Дорога на север</span>
         <span class="promo-photo__subtitle">Автор фото: Петр</span>
         <div class="promo-photo__like">
-          <span class="promo-photo__like-number">96<"/span">
+          <span class="promo-photo__like-number">96</span>
         </div>
       </div>
       <div class="promo-photo">
@@ -51,7 +75,7 @@
         <span class="promo-photo__title">Мост Дьявола</span>
         <span class="promo-photo__subtitle">Автор фото: Антон</span>
         <div class="promo-photo__like">
-          <span class="promo-photo__like-number">254<"/span">
+          <span class="promo-photo__like-number">254</span>
         </div>
       </div>
     </section>
@@ -60,11 +84,33 @@
         <h2 class="commercial__title">Все еще сомневаетесь?</h2>
         <p class="commercial__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </div>
-      <video class="commercial__video" controls preload="metadata" width="#" height="#" poster="#">
+      <video class="commercial__video" controls preload="metadata" width="320" height="200" poster="#">
       </video>
     </section>
   </main>
-  <footer>
+  <footer class="page-footer">
+    <span class="page-footer__hashtag">#visitsedona</span>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="#">
+          <span class="visually-hidden">Твиттер</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="#">
+          <span class="visually-hidden">Фэйсбук</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="#">
+          <span class="visually-hidden">Ютюб</span>
+        </a>
+      </li>
+    </ul>
+    <div class="copyright">
+      <p class="copyright__content">Разработано</p>
+      <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
+    </div>
   </footer>
 </body>
 </html>
