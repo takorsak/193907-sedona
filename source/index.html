@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
   <header class="page-header">
@@ -26,22 +28,25 @@
     </nav>
     <div class="logo page-header__logo">
       <a class="logo__link">
-        <img class="logo__image" src="#" width="#" height="#" alt="логотип сайта Седона">
+        <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта Седона">
       </a>
     </div>
   </header>
   <main>
     <div class="promo promo--decoration">Баннер</div>
+    <div class="page-decoration">Декоративный элемент</div>
     <section class="reasons">
       <div class="page-intro page-intro--decoration">
         <h1 class="page-intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="page-intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
-      <div class="reason reason--decoration">
-        <h2 class="reason__title">Настоящий городок</h2>
-        <span class="reason__index-number">— №1 —</span>
-        <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-        <img class="reason__image" src="#" width="#" height="#" alt="Вид на стереотипный мотель Дикого Запада">
+      <div class="reason">
+        <div class="reason__description reason--decoration">
+          <h2 class="reason__title">Настоящий городок</h2>
+          <span class="reason__index-number">— №1 —</span>
+          <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+        </div>
+        <img class="reason__image reason__image-order" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Вид на стереотипный мотель Дикого Запада">
       </div>
       <ul class="advantages advantages__list">
         <li class="advantages__item advantages__item--housing">
@@ -58,30 +63,34 @@
         </li>
       </ul>
       <div class="reason">
-        <h2 class="reason__title">Там есть мост Дьявола</h2>
-        <span class="reason__index-number">— №2 —</span>
-        <p class="reason__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-        <img class="reason__image" src="#" width="#" height="#" alt="Узкий каменный мостик над пропастью">
-      </div>
-      <div class="reason reason--secondary">
-        <div class="reason__wrapper reason__border">
-          <h2 class="reason__title">Небольшая площадь</h2>
-          <span class="reason__index-number">— №3 —</span>
-          <p class="reason__text">Все интересные места находятся очень близко</p>
+        <div class="reason__description reason--order">
+          <h2 class="reason__title">Там есть мост Дьявола</h2>
+          <span class="reason__index-number">— №2 —</span>
+          <p class="reason__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
+        <img class="reason__image" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Узкий каменный мостик над живописной пропастью">
       </div>
-      <div class="reason reason--secondary">
-        <div class="reason__wrapper reason__border">
-          <h2 class="reason__title">Красивая дорога</h2>
-          <span class="reason__index-number">— №4 —</span>
-          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      <div class="reasons__reason-description">
+        <div class="reason reason--secondary">
+          <div class="reason__wrapper reason__border">
+            <h2 class="reason__title">Небольшая площадь</h2>
+            <span class="reason__index-number">— №3 —</span>
+            <p class="reason__text">Все интересные места находятся очень близко</p>
+          </div>
         </div>
-      </div>
-      <div class="reason reason--secondary">
-        <div class="reason__wrapper">
-          <h2 class="reason__title">Мало туристов</h2>
-          <span class="reason__index-number">— №5 —</span>
-          <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reason reason--secondary">
+          <div class="reason__wrapper reason__border">
+            <h2 class="reason__title">Красивая дорога</h2>
+            <span class="reason__index-number">— №4 —</span>
+            <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
+        </div>
+        <div class="reason reason--secondary">
+          <div class="reason__wrapper">
+            <h2 class="reason__title">Мало туристов</h2>
+            <span class="reason__index-number">— №5 —</span>
+            <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
         </div>
       </div>
     </section>

@@ -4,10 +4,25 @@
   padding-bottom: 23px;
   padding-left: 85px;
   padding-right: 85px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .page-footer__hashtag {
   font-size: @hashtag-font-size;
   line-height: @hashtag-line-height;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    margin: 0;
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
