@@ -42,43 +42,47 @@
       </div>
       <div class="page-form__inner">
         <form class="form" action="#" method="post">
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--name">
             <legend class="form__group-heading">Представьтесь:</legend>
               <div class="form__group-wrapper">
                 <ul class="form__group-list">
                   <li class="form__group-item">
                     <label class="form__group-title" for="name">Имя*:</label>
-                    <input class="form__field" id="name" name="name" type="text" placeholder="Петр" required>
+                    <input class="form__field form__field-name" id="name" name="name" type="text" placeholder="Петр" required>
                   </li>
                   <li class="form__group-item">
                     <label class="form__group-title" for="sername">Фамилия*:</label>
-                    <input class="form__field" id="sername" name="name" type="text" placeholder="Иванов" required>
+                    <input class="form__field form__field-sername" id="sername" name="name" type="text" placeholder="Иванов" required>
                   </li>
                   <li class="form__group-item">
                     <label class="form__group-title" for="patronym">Отчество:</label>
-                    <input class="form__field" id="patronym" name="name" type="text" placeholder="Александрович">
+                    <input class="form__field form__field-patronym" id="patronym" name="name" type="text" placeholder="Александрович">
                   </li>
                 </ul>
             </div>
           </fieldset>
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--contacts">
             <legend class="form__group-heading">Контактная информация</legend>
               <div class="form__group-wrapper">
                 <ul class="form__group-list">
-                  <li class="form__group-item">
-                    <label class="form__group-title" for="phone-number">Контактный телефон*:</label>
-                    <input class="form__field" id="phone-number" name="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" required>
-                    <div class="form__phone">Иконка телефона</div>
+                  <li class="form__group-item form__item-contacts">
+                    <label class="form__group-title form__title-phone" for="phone-number"><span class="form__title-phrase">Контактный</span> телефон*:</label>
+                    <div class="form__group-content">
+                      <input class="form__field form__field-phone" id="phone-number" name="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" required>
+                      <div class="form__phone">Иконка телефона</div>
+                    </div>
                   </li>
-                  <li class="form__group-item">
-                    <label class="form__group-title" for="email">Электронная почта*:</label>
-                    <input class="form__field" id="email" name="email" type="email" placeholder="Введите e-mail" required>
-                    <div class="form__email">Иконка почты</div>
+                  <li class="form__group-item form__item-contacts">
+                    <label class="form__group-title form__title-email" for="email">Электронная почта*:</label>
+                    <div class="form__group-content">
+                      <input class="form__field form__field-email" id="email" name="email" type="email" placeholder="Введите e-mail" required>
+                      <div class="form__email">Иконка почты</div>
+                    </div>
                   </li>
                 </ul>
             </div>
           </fieldset>
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--impression">
             <legend class="form__group-heading">Ваше общее впечатление:</legend>
               <div class="form__group-wrapper">
                 <ul class="form__group-list">
@@ -97,7 +101,7 @@
                 </ul>
             </div>
           </fieldset>
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--attractions">
             <legend class="form__group-heading">Посещенные достопримечательности:</legend>
               <div class="form__group-wrapper">
                 <ul class="form__group-list">
@@ -125,6 +129,7 @@
             <textarea class="form__field form__field-message" id="review" name="review" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
           <button class="button page-form__button" type="submit">Отправить отзыв</button>
+          <div class="form__note">* — Обязательные поля</div>
         </form>
       </div>
     </section>
