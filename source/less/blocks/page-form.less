@@ -2,3 +2,46 @@
   margin: 0;
   padding: 0;
 }
+
+.page-form__button {
+  margin: 0;
+  padding: 0;
+  margin-left: @padding-side;
+  margin-right: @padding-side;
+  margin-top: 25px;
+  margin-bottom: 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-form__button {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-form__inner {
+    margin: 0;
+    padding: 0;
+    padding-left: @tablet-padding-side;
+    padding-right: @tablet-padding-side;
+  }
+
+  .page-form__button {
+    width: @tablet-item-width;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .page-form__button {
+    margin: 0;
+    padding: 0;
+    width: 480px;
+    box-sizing: border-box;
+  }
+
+  .page-form__inner {
+    margin: 0;
+    padding: 0;
+    padding-left: @desctop-padding-side;
+    padding-right: @desctop-padding-side;
+  }
+}

@@ -178,13 +178,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-form__inner {
-    margin: 0;
-    padding: 0;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
   .form {
     display: flex;
     flex-wrap: wrap;
@@ -199,7 +192,7 @@
   }
 
   .form__group {
-    width: 324px;
+    width: @tablet-item-width;
     margin: 0;
     padding: 0;
 
@@ -231,13 +224,13 @@
   .form__group--contacts {
     margin: 0;
     padding: 0;
-    width: 648px;
+    width: @tablet-content-width;
   }
 
   .form__group--contacts .form__item-contacts {
     margin: 0;
     padding: 0;
-    width: 648px;
+    width: @tablet-content-width;
   }
 
   .form__field-phone,
@@ -248,7 +241,7 @@
   .form__group--attractions {
     margin: 0;
     padding: 0;
-    width: 648px;
+    width: @tablet-content-width;
   }
 
   .form__group--attractions .form__group-list {
@@ -268,33 +261,19 @@
   }
 
   .form__field-message {
-    width: 648px;
+    width: @tablet-content-width;
     box-sizing: border-box;
   }
 
   .form__note {
     visibility: visible;
     display: inline-block;
-    width: 324px;
+    width: @tablet-item-width;
     text-align: right;
-  }
-
-  .page-footer {
-    margin: 0;
-    padding: 0;
-    padding-left: 60px;
-    padding-right: 60px;
   }
 }
 
 @media (min-width: @desctop-width) {
-  .page-form__inner {
-    margin: 0;
-    padding: 0;
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-
   .form__group--name .form__group-item,
   .form__group--impression .form__group-item {
     width: 400px;
