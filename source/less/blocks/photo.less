@@ -2,3 +2,53 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .photo {
+    margin: 0;
+    padding: 0;
+    margin-right: @tablet-padding-side;
+    margin-left: @tablet-padding-side;
+  }
+
+  .photo__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__meta {
+    display: flex;
+    justify-content: space-around;
+
+    background-color: #f2f2f2;
+  }
+
+  .photo__description {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+    flex-grow: 1;
+
+    padding-left: @padding-side;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .photo {
+    margin: 0;
+    padding: 0;
+  }
+
+  .photo__meta {
+    color: #ffffff;
+
+    background-color: #000000;
+    opacity: 0.5;
+
+    position: relative;
+    z-index: 1;
+
+    margin-top: -48px;
+  }
+}

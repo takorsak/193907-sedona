@@ -16,6 +16,9 @@
   margin-top: @padding-top;
 }
 
+.form__group-wrapper {
+  display: flex;
+}
 
 .form__group-heading {
   text-align: center;
@@ -29,9 +32,39 @@
   font-style: normal;
   line-height: @title-line-height;
   font-weight: 400;
+
+  margin:0;
+  padding: 0;
+  display: inline-block;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form__group-item {
+  width: 280px;
+  display: flex;
+}
+
+.form__radio-title,
+.form__checkbox-title {
+  margin: 0;
+  padding: 0;
+  font-size: @placeholder-font-size;
+  line-height: @placeholder-line-height;
+  font-weight: 700;
+
+  text-transform: none;
+}
+
+.form__title-email {
+  padding-bottom: 15px;
+
 }
 
 .form__field {
+  margin: 0;
+  padding: 0;
   font-size: @placeholder-font-size;
   line-height: @placeholder-line-height;
   font-weight: 700;
@@ -39,11 +72,38 @@
   border: 0;
   outline: none;
 
-  padding: @padding-side;
+  padding: 16px @padding-side;
 
   background-color: @semi-dark;
 
   .form__field()
+}
+
+.form__field-name {
+  width: 82%;
+}
+
+.form__field-sername {
+  width: 69%;
+}
+
+.form__field-patronym {
+  width: 70%;
+}
+
+.form__item-contacts {
+  flex-direction: column;
+}
+
+.form__group-content {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.form__field-phone,
+.form__field-email {
+  width: 79%;
 }
 
 .form__group-list {
@@ -85,7 +145,7 @@
   width: 19px;
   height: 19px;
 
-  background-image: url(../img/icon-phone.svg);
+  background-image: url("../img/icon-phone.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -108,7 +168,197 @@
   width: 17px;
   height: 17px;
 
-  background-image: url(../img/icon-mail.svg);
+  background-image: url("../img/icon-mail.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.form__note {
+  visibility: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__group--impression {
+    order: -1;
+  }
+
+  .form__group--name {
+    order: 0;
+  }
+
+  .form__group {
+    width: @tablet-item-width;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+  }
+
+  .form__group-item {
+    width: 273px;
+  }
+
+  .form__group--name .form__group-item {
+    width: 265px;
+  }
+
+  .form__group--name {
+    padding-left: 58px;
+    box-sizing: border-box;
+  }
+
+  .form__group-heading {
+    text-align: left;
+  }
+
+  .form__group--contacts .form__group-heading,
+  .form__group--attractions .form__group-heading {
+    text-align: center;
+  }
+
+  .form__group--contacts {
+    margin: 0;
+    padding: 0;
+    width: @tablet-content-width;
+  }
+
+  .form__group--contacts .form__item-contacts {
+    margin: 0;
+    padding: 0;
+    width: @tablet-content-width;
+  }
+
+  .form__field-phone,
+  .form__field-email {
+    width: 100%;
+  }
+
+  .form__group--attractions {
+    margin: 0;
+    padding: 0;
+    width: @tablet-content-width;
+  }
+
+  .form__group--attractions .form__group-list {
+    width: 459px;
+    margin: 0;
+    padding: 0;
+    margin-left: 96px;
+    margin-right: 96px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__group--attractions .form__group-item {
+    width: 228px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__field-message {
+    width: @tablet-content-width;
+    box-sizing: border-box;
+  }
+
+  .form__note {
+    visibility: visible;
+    display: inline-block;
+    width: @tablet-item-width;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .form__group--name .form__group-item,
+  .form__group--impression .form__group-item {
+    width: 400px;
+   }
+
+  .form__group--name,
+  .form__group--impression {
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__group--impression {
+    margin-right: 160px;
+  }
+
+  .form__group--contacts .form__item-contacts {
+    margin: 0;
+    padding: 0;
+    width: 960px;
+  }
+
+  .form__title-phrase {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .form__group--contacts .form__item-contacts {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    margin-right: 80px;
+  }
+
+  .form__group--contacts .form__item-contacts:nth-child(2) {
+    margin: 0;
+    padding: 0;
+    width: 480px;
+  }
+
+  .form__field-phone {
+    width: 65%;
+  }
+
+  .form__field-email {
+    width: 79%;
+  }
+
+  .form__item-contacts {
+    flex-direction: row;
+  }
+
+  .form__group--contacts .form__group-list {
+    display: flex;
+  }
+
+  .form__group--attractions {
+    margin: 0;
+    padding: 0;
+    width: 690px;
+  }
+
+  .form__group--attractions .form__group-list {
+    width: 960px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__group--attractions .form__group-item {
+    width: 228px;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    /*Временно чтобы видеть сетку*/
+    border: 1px solid black;
+  }
+
+  .form__field-message {
+    width: 960px;
+    box-sizing: border-box;
+  }
+
+  .form__note {
+    visibility: visible;
+    display: inline-block;
+    width: 480px;
+    text-align: right;
+  }
 }

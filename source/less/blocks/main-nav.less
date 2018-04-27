@@ -17,3 +17,39 @@
   color: @text-light;
   text-decoration: none;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+  }
+
+  .main-nav__button { /*так или иначе?*/
+    display: none;
+  }
+
+  .main-nav__item:nth-child(1) {
+    margin-left: 45px;
+  }
+
+  .main-nav__item:nth-child(2) {
+    margin: auto;
+  }
+
+  .main-nav__item:nth-child(3) {
+    margin: auto;
+  }
+
+  .main-nav__item:nth-child(4) {
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .main-nav__item:nth-child(1) {
+    margin-left: 90px;
+  }
+
+  .main-nav__item:nth-child(4) {
+    margin-right: 70px;
+  }
+}

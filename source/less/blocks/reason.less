@@ -1,14 +1,19 @@
 .reason {
+  margin: 0;
+  padding: 0;
+
   color: @text-light;
 
   background-color: @text-info;
 
   text-align: center;
 
-  padding-left: @padding-side;
-  padding-right: @padding-side;
+  display: flex;
+  flex-direction: column;
+}
+
+.reason__description {
   padding-top: 43px;
-  padding-bottom: 46px;
 }
 
 .reason__title {
@@ -17,6 +22,8 @@
   font-size: @title-font-size;
   line-height: @title-line-height;
   font-weight: 700;
+
+  display: block;
 }
 
 .reason__index-number {
@@ -27,6 +34,10 @@
 .reason__text {
   margin: 0;
   padding: 0;
+
+  display: block;
+  padding-left: @padding-side;
+  padding-right: @padding-side;
 }
 
 .reason--secondary {
@@ -36,7 +47,6 @@
 
   margin: 0;
   padding: 0;
-
 }
 
 .reason__wrapper {
@@ -44,8 +54,8 @@
   padding: 0;
   margin-left: @padding-side;
   margin-right: @padding-side;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   width: @content-width;
 }
@@ -56,20 +66,99 @@
 
 .reason--decoration {
   position: relative;
-  padding-top: 60px;
+  padding-top: 77px;
 }
 
 .reason--decoration::before {
   content: "";
 
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 
   width: 320px;
   height: 40px;
 
-  background-image: url(../img/bg-triangle.svg);
+  background-image: url("../img/bg-triangle.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   }
+
+.reason__image {
+  margin: 0;
+  padding: 0;
+
+  min-height: 260px;
+  width: 320px;
+  background-color: #e2aa87;
+}
+
+.reasons__reason-description {
+  background-color: #eeeeee;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .reason--decoration::before {
+    visibility: hidden;
+  }
+
+  .reason {
+    flex-direction: row;
+  }
+
+  .reason__description {
+    width: 265px;
+  }
+
+  .reason__image {
+    flex-grow: 1;
+  }
+
+  .reasons__reason-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .reason--order {
+    order: 2;
+  }
+
+  .reason__image-order {
+    order: 1;
+  }
+
+  .reason__wrapper {
+    width: @advantages-tablet-width;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .reason__border {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .reason {
+    flex-direction: row;
+  }
+
+  .reason__description {
+    width: 400px;
+  }
+
+  .reason__image {
+    flex-grow: 1;
+  }
+
+  .reason__wrapper {
+    width: @advantages-desctop-width;
+  }
+}

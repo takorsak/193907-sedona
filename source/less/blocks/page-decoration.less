@@ -1,0 +1,25 @@
+.page-decoration {
+  margin: 0;
+  padding: 0;
+  min-height: 34px;
+  position: relative;
+  z-index: 1;
+
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  margin-top: -29px;
+  background-size: 320px 34px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-decoration {
+    min-height: 65px;
+
+    background-image: url("../img/bg-intro-triangle.png");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    margin-top: -64px;
+    background-size: @desctop-width 65px;
+  }
+}
