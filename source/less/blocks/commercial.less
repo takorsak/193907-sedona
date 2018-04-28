@@ -3,19 +3,22 @@
 
   padding-top: 33px;
   padding-bottom: 50px;
-  padding-right: @padding-side;
-  padding-left: @padding-side;
+  padding-right: @indent-side;
+  padding-left: @indent-side;
 }
 
 .commercial__title {
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   font-weight: 700;
+  text-align: center;
 }
 
 .commercial__text {
+  display: inline-block;
   margin: 0;
   padding: 0;
   line-height: @text-line-height;
@@ -23,6 +26,8 @@
 
 .commercial__link {
   text-decoration: none;
+  display: inline-block;
+  margin-top: 40px;
 }
 
 .commercial__map {
@@ -44,6 +49,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .commercial__text {
+    width: 440px;
+  }
+
+  .commercial__link {
+    width: 460px;
+  }
+
   .commercial__map {
     background-color: #cbe0a4;
     background-size: @tablet-width;
@@ -70,25 +83,39 @@
   }
 }
 
-@media (min-width: @desctop-width) {
-  .commercial__map {
-    background-color: #cbe0a4;
-    background-size: @desctop-width;
-  }
-
-  .commercial--inner {
-    padding-left: @desctop-padding-side;
-    padding-right: @desctop-padding-side;
-
-    width: 960px;
-  }
-
+@media (min-width: @desktop-width) {
   .commercial__content {
     margin: 0;
     padding: 0;
+    padding-top: 57px;
+    padding-bottom: 67px;
+    /*временно для сетки
+    border: 1px solid red;*/
+  }
 
-    margin-left: 260px;
-    margin-right: 260px;
+  .commercial__text {
+    width: 440px;
+    margin: 0 auto;
+    /*временно для сетки
+    border: 1px solid red;*/
+  }
+
+  .commercial__link {
+    width: 460px;
+    margin-left: 372px;
+    margin-right: 372px;
+  }
+
+  .commercial__map {
+    background-color: #cbe0a4;
+    background-size: @desktop-width;
+  }
+
+  .commercial--inner {
+    padding-left: @desktop-padding-side;
+    padding-right: @desktop-padding-side;
+
+    width: 960px;
   }
 
   .commercial__video {
@@ -103,7 +130,7 @@
     height: 500px;
     width: 800px;
 
-    margin-left: @desctop-commercial-padding;
-    margin-right: @desctop-commercial-padding;
+    margin-left: @desktop-commercial-padding;
+    margin-right: @desktop-commercial-padding;
   }
 }

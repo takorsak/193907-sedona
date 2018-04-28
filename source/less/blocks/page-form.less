@@ -5,9 +5,8 @@
 
 .page-form__button {
   margin: 0;
-  padding: 0;
-  margin-left: @padding-side;
-  margin-right: @padding-side;
+  margin-left: @indent-side;
+  margin-right: @indent-side;
   margin-top: 25px;
   margin-bottom: 37px;
 }
@@ -15,7 +14,8 @@
 @media (min-width: @tablet-width) {
   .page-form__button {
     margin: 0;
-    padding: 0;
+    margin-bottom: 60px;
+    width: @tablet-item-width;
   }
 
   .page-form__inner {
@@ -24,24 +24,18 @@
     padding-left: @tablet-padding-side;
     padding-right: @tablet-padding-side;
   }
-
-  .page-form__button {
-    width: @tablet-item-width;
-  }
 }
 
-@media (min-width: @desctop-width) {
+@media (min-width: @desktop-width) {
   .page-form__button {
-    margin: 0;
-    padding: 0;
     width: 480px;
-    box-sizing: border-box;
+    margin-bottom: 67px;
   }
 
   .page-form__inner {
     margin: 0;
     padding: 0;
-    padding-left: @desctop-padding-side;
-    padding-right: @desctop-padding-side;
+    padding-left: @desktop-padding-side;
+    padding-right: @desktop-padding-side;
   }
 }

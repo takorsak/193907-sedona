@@ -1,10 +1,9 @@
 .page-intro {
   margin: 0;
   padding: 0;
-  padding-right: @padding-side;
-  padding-left: @padding-side;
+  padding-right: @indent-side;
+  padding-left: @indent-side;
   padding-top: 42px;
-
   text-align: center;
 }
 
@@ -15,6 +14,7 @@
 .page-intro__title {
   margin: 0;
   padding: 0;
+  margin-bottom: 32px;
   font-size: @title-font-size;
   line-height: @title-line-height;
   font-weight: 700;
@@ -26,37 +26,33 @@
   line-height: @title-line-height;
 }
 
-.page-intro--decoration {
-  padding-bottom: 8px;
-}
-
 .page-intro--inner {
-  padding-right: @padding-side;
-  padding-left: @padding-side;
-  padding-top: 40px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: @tablet-width) {
   .page-intro {
-    margin: 0;
-    padding: 0;
-
-    width: 489px;
-
     margin: 0 auto;
+    padding: 0;
+    width: 489px;
+    padding-top: 48px;
+    padding-bottom: 54px;
   }
 
   .page-intro--inner {
-    margin: 0;
-    padding: 0;
-
-    width: 459px;
-
-    margin: 0 auto;
+    padding-top: 65px;
+    padding-bottom: 75px;
+    width: 450px;
   }
 
   .page-intro--border {
     border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-intro--inner {
+    padding-top: 105px;
+    padding-bottom: 65px;
   }
 }

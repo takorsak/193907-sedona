@@ -1,6 +1,7 @@
 .main-nav {
+  margin: 0;
+  padding: 0;
   background-color: @text-info;
-
   text-align: center;
 }
 
@@ -19,11 +20,19 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    background-color: @text-light;
+  }
+
+  .main-nav__link {
+    color: @text-dark;
+  }
+
   .main-nav__list {
     display: flex;
   }
 
-  .main-nav__button { /*так или иначе?*/
+  .main-nav__button {
     display: none;
   }
 
@@ -44,7 +53,7 @@
   }
 }
 
-@media (min-width: @desctop-width) {
+@media (min-width: @desktop-width) {
   .main-nav__item:nth-child(1) {
     margin-left: 90px;
   }

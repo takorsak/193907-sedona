@@ -1,14 +1,17 @@
 .promo-photo {
   margin: 0;
   padding: 0;
-  padding-top: @padding-top;
+  padding-top: @indent-top;
+  padding-right: @indent-side;
   padding-bottom: 23px;
-  padding-right: @padding-side;
-  padding-left: @padding-side;
+  padding-left: @indent-side;
 
   border-bottom: @border;
 
   text-align: left;
+
+  /*временно для сетки
+  border: 1px solid red;*/
 }
 
 .promo-photo--border {
@@ -18,6 +21,8 @@
 .promo-photo__title {
   line-height: @promo-photo-line-height;
   font-weight: 700;
+  /*временно для сетки
+  border: 1px solid red;*/
 }
 
 .promo-photo__subtitle {
@@ -26,14 +31,22 @@
   font-weight: 400;
 
   text-transform: none;
+  /*временно для сетки
+  border: 1px solid red;*/
+
 }
 
 .promo-photo__like {
   position: relative;
+  margin-top: 10px;
+  /*временно для сетки
+  border: 1px solid purple;*/
 }
 
 .promo-photo__like-number {
   margin-left: 37px;
+  /*временно для сетки
+  border: 1px solid green;*/
 }
 
 .promo-photo__like::before {
@@ -65,6 +78,9 @@
     border-bottom: none;
 
     width: @tablet-item-width;
+
+    /*временно для сетки
+    border: 1px solid green;*/
   }
 
   .promo-photo--border {
@@ -73,6 +89,8 @@
 
   .promo-photo--first {
     width: @tablet-content-width;
+    /*временно для сетки
+    border: 1px solid blue;*/
   }
 
   .promo-photo__image {
@@ -85,7 +103,7 @@
   }
 }
 
-@media (min-width: @desctop-width) {
+@media (min-width: @desktop-width) {
   .promo-photo--first {
     width: 1200px;
   }
@@ -95,8 +113,11 @@
   }
 
   .promo-photo__like {
-    width: @desctop-padding-side;
+    width: 85px;
     box-sizing: border-box;
+    /* временно для сетки
+    border: 1px solid white;*/
+
   }
 
   .promo-photo__image {
