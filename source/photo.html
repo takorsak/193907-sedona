@@ -8,129 +8,130 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <header class="page-header">
-    <nav class="main-nav page-header__menu">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Главная</a>
+  <div class="page-container">
+    <header class="page-header">
+      <nav class="main-nav page-header__menu">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/">html academy</a>
+          </li>
+        </ul>
+        <button class="main-nav__button--close main-nav__button--open" type="button">Меню</button>
+      </nav>
+      <div class="logo page-header__logo">
+        <a class="logo__link" href="index.html">
+          <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта Седона">
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="promo promo--inner">Баннер</div>
+      <section class="photo">
+        <div class="page-intro page-intro--inner">
+          <h1 class="page-intro__title">Фото и видео</h1>
+          <p class="page-intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+        <div class="photo__wrapper">
+          <div class="promo-photo promo-photo--first promo-photo--border">
+            <a class="promo-photo__link" href="#">
+              <img class="promo-photo__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Закат с видом на шоссе и горы">
+            </a>
+            <div class="photo__meta">
+              <div class="photo__description">
+                <span class="promo-photo__title">Неродные просторы</span>
+                <span class="promo-photo__subtitle">Автор фото: Борис</span>
+              </div>
+              <div class="promo-photo__like">
+                <span class="promo-photo__like-number">1350</span>
+              </div>
+            </div>
+          </div>
+          <div class="promo-photo">
+            <a class="promo-photo__link" href="#">
+              <img class="promo-photo__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Пушистый кактус на фоне скал">
+            </a>
+            <div class="photo__meta">
+              <div class="photo__description">
+                <span class="promo-photo__title">Местная растительность</span>
+                <span class="promo-photo__subtitle">Автор фото: Сергей</span>
+              </div>
+              <div class="promo-photo__like">
+                <span class="promo-photo__like-number">143</span>
+              </div>
+            </div>
+          </div>
+          <div class="promo-photo">
+            <a class="promo-photo__link" href="#">
+              <img class="promo-photo__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога в горном лесу: вид сверху">
+            </a>
+            <div class="photo__meta">
+              <div class="photo__description">
+                <span class="promo-photo__title">Дорога на север</span>
+                <span class="promo-photo__subtitle">Автор фото: Петр</span>
+              </div>
+              <div class="promo-photo__like">
+                <span class="promo-photo__like-number">96</span>
+              </div>
+            </div>
+          </div>
+          <div class="promo-photo">
+            <a class="promo-photo__link" href="#">
+              <img class="promo-photo__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Узкий мостик естественного происхождения в скалах над пропастью">
+            </a>
+            <div class="photo__meta">
+              <div class="photo__description">
+                <span class="promo-photo__title">Мост Дьявола</span>
+                <span class="promo-photo__subtitle">Автор фото: Антон</span>
+              </div>
+              <div class="promo-photo__like">
+                <span class="promo-photo__like-number">254</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="commercial commercial--inner">
+        <div class="commercial__content">
+          <h2 class="commercial__title">Все еще сомневаетесь?</h2>
+          <p class="commercial__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <video class="commercial__video" controls preload="metadata" width="320" height="200" poster="#">
+        </video>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <span class="page-footer__hashtag">#visitsedona</span>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Фото и видео</a>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Фэйсбук</span>
+          </a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Форма отзыва</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">html academy</a>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Ютюб</span>
+          </a>
         </li>
       </ul>
-      <button class="main-nav__button--close main-nav__button--open" type="button">Меню</button>
-    </nav>
-    <div class="logo page-header__logo">
-      <a class="logo__link">
-        <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта Седона">
-      </a>
-    </div>
-  </header>
-  <main>
-    <div class="promo promo--inner">Баннер</div>
-    <div class="page-decoration page-decoration--inner">Декоративный элемент</div>
-    <section class="photo">
-      <div class="page-intro page-intro--inner">
-        <h1 class="page-intro__title">Фото и видео</h1>
-        <p class="page-intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <div class="copyright">
+        <p class="copyright__content">Разработано</p>
+        <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
       </div>
-      <div class="photo__wrapper">
-        <div class="promo-photo promo-photo--first promo-photo--border">
-          <a class="promo-photo__link" href="#">
-            <img class="promo-photo__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Закат с видом на шоссе и горы">
-          </a>
-          <div class="photo__meta">
-            <div class="photo__description">
-              <span class="promo-photo__title">Неродные просторы</span>
-              <span class="promo-photo__subtitle">Автор фото: Борис</span>
-            </div>
-            <div class="promo-photo__like">
-              <span class="promo-photo__like-number">1350</span>
-            </div>
-          </div>
-        </div>
-        <div class="promo-photo">
-          <a class="promo-photo__link" href="#">
-            <img class="promo-photo__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Пушистый кактус на фоне скал">
-          </a>
-          <div class="photo__meta">
-            <div class="photo__description">
-              <span class="promo-photo__title">Местная растительность</span>
-              <span class="promo-photo__subtitle">Автор фото: Сергей</span>
-            </div>
-            <div class="promo-photo__like">
-              <span class="promo-photo__like-number">143</span>
-            </div>
-          </div>
-        </div>
-        <div class="promo-photo">
-          <a class="promo-photo__link" href="#">
-            <img class="promo-photo__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога в горном лесу: вид сверху">
-          </a>
-          <div class="photo__meta">
-            <div class="photo__description">
-              <span class="promo-photo__title">Дорога на север</span>
-              <span class="promo-photo__subtitle">Автор фото: Петр</span>
-            </div>
-            <div class="promo-photo__like">
-              <span class="promo-photo__like-number">96</span>
-            </div>
-          </div>
-        </div>
-        <div class="promo-photo">
-          <a class="promo-photo__link" href="#">
-            <img class="promo-photo__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Узкий мостик естественного происхождения в скалах над пропастью">
-          </a>
-          <div class="photo__meta">
-            <div class="photo__description">
-              <span class="promo-photo__title">Мост Дьявола</span>
-              <span class="promo-photo__subtitle">Автор фото: Антон</span>
-            </div>
-            <div class="promo-photo__like">
-              <span class="promo-photo__like-number">254</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="commercial commercial--inner">
-      <div class="commercial__content">
-        <h2 class="commercial__title">Все еще сомневаетесь?</h2>
-        <p class="commercial__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      </div>
-      <video class="commercial__video" controls preload="metadata" width="320" height="200" poster="#">
-      </video>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <span class="page-footer__hashtag">#visitsedona</span>
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">
-          <span class="visually-hidden">Твиттер</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="#">
-          <span class="visually-hidden">Фэйсбук</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="#">
-          <span class="visually-hidden">Ютюб</span>
-        </a>
-      </li>
-    </ul>
-    <div class="copyright">
-      <p class="copyright__content">Разработано</p>
-      <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>
