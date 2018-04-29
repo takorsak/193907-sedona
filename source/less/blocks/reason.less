@@ -14,19 +14,22 @@
 }
 
 .reason__title {
-  margin: 0;
-  padding: 0;
   font-size: @title-font-size;
   line-height: @title-line-height;
   font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+
   text-align: center;
 }
 
 .reason__index-number {
-  display: inline-block;
   margin: 0;
   padding: 0;
   margin: 15px 130px;
+
+  display: inline-block;
 }
 
 .reason__text {
@@ -34,23 +37,21 @@
   padding: 0;
   padding-left: @indent-side;
   padding-right: @indent-side;
+
   display: inline-block;
   text-align: center;
 }
 
-.reason__text-secondary {
-  margin-bottom: 0;
-}
-
 .reason--secondary {
   color: @text-dark;
-  background-color: @text-secondary;
+
   margin: 0;
   padding: 0;
+
+  background-color: @text-secondary;
 }
 
 .reason__wrapper {
-  margin: 0;
   padding: 0;
   margin-left: @indent-side;
   margin-right: @indent-side;
@@ -120,14 +121,8 @@
     box-sizing: border-box;
   }
 
-  .reason__title {
-    margin: 0;
-    padding: 0;
-  }
-
   .reason__index-number {
     margin: 0;
-    padding: 0;
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 53px;
@@ -135,7 +130,6 @@
   }
 
   .reason__text {
-    margin: 0;
     padding: 0;
   }
 
@@ -158,10 +152,10 @@
   }
 
   .reason__wrapper {
-    width: @advantages-tablet-width;
     margin: 0;
     padding: 0;
     padding: 30px 50px;
+    width: @advantages-tablet-width;
   }
 
   .reason__wrapper .reason__title {
@@ -189,18 +183,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .reason {
-    flex-direction: row;
-  }
-
   .reason__description {
     margin: 0;
     padding: 0;
-    width: 400px;
     padding-top: 55px;
     padding-bottom: 55px;
     padding-right: 67px;
     padding-left: 67px;
+    width: 400px;
   }
 
   .reason__index-number {
@@ -208,29 +198,18 @@
     margin-right: 100px;
   }
 
-  .reason__text {
-    margin: 0;
-    padding: 0;
-  }
-
-
-  .reason__image {
-    flex-grow: 1;
-  }
-
   .reason__wrapper {
-    width: @advantages-desktop-width;
     margin: 0;
     padding: 0;
     padding-top: 48px;
     padding-bottom: 66px;
     padding-left: 57px;
     padding-right: 57px;
+    width: @advantages-desktop-width;
   }
 
   .reason__wrapper .reason__title {
     margin: 0;
-    padding: 0;
     margin-right: 80px;
     margin-left: 80px;
   }

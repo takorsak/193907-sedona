@@ -17,8 +17,6 @@
 
 @media (min-width: @tablet-width) {
   .photo {
-    margin: 0;
-    padding: 0;
     margin-right: @tablet-padding-side;
     margin-left: @tablet-padding-side;
   }
@@ -39,8 +37,6 @@
   }
 
   .photo__description {
-    display: flex;
-    flex-direction: column;
     width: 200px;
 
     flex-grow: 1;
@@ -52,7 +48,6 @@
 @media (min-width: @desktop-width) {
   .photo {
     margin: 0;
-    padding: 0;
   }
 
   .photo__wrapper {
@@ -64,12 +59,12 @@
   .photo__meta {
     color: #ffffff;
 
+    margin-top: -82px;
+
     background-color: #000000;
     opacity: 0.5;
 
     position: relative;
     z-index: 1;
-
-    margin-top: -82px;
   }
 }
