@@ -5,14 +5,6 @@
 
 .form__group {
   border: none;
-  margin: 0;
-  margin-top: @indent-top;
-  padding: 0;
-  padding-top: @indent-top;
-  padding-bottom: @padding-bottom;
-  border-bottom: @border;
-  padding-left: @indent-side;
-  padding-right: @indent-side;
 }
 
 .form__group-wrapper {
@@ -28,8 +20,6 @@
   padding: 0;
 
   text-align: center;
-  /* Временно, чтобы видеть сетку
-  border: 1px solid green;*/
 }
 
 .form__group-title {
@@ -53,7 +43,7 @@
 }
 
 .form__group-item {
-  width: 280px;
+  width: @content-width;
   display: flex;
 }
 
@@ -109,6 +99,8 @@ li:nth-child(4) .form__checkbox-last {
   outline: none;
   background-color: @semi-dark;
 
+  display: block;
+
   .form__field()
 }
 
@@ -148,14 +140,12 @@ li:nth-child(4) .form__checkbox-last {
 }
 
 .form__inner {
-  margin: 0;
-  padding: 0;
+  width: @content-width;
+  margin: 0 auto;
   padding-top: @indent-top;
   padding-bottom: @padding-bottom;
 
   text-align: center;
-  /*Временно, чтобы видеть сетку
-  border: 1px solid green;*/
 }
 
 .form__field-message {
@@ -214,6 +204,18 @@ li:nth-child(4) .form__checkbox-last {
   visibility: hidden;
 }
 
+@media (max-width: @mobile-width-only) {
+  .form__group {
+    margin: 0 auto;
+    width: @content-width;
+    margin-top: @indent-top;
+    padding: 0;
+    padding-top: @indent-top;
+    padding-bottom: @padding-bottom;
+    border-bottom: @border;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .form {
     display: flex;
@@ -238,7 +240,7 @@ li:nth-child(4) .form__checkbox-last {
     border: none;
   }
 
-  .form__group-item {
+   .form__group-item {
     width: 273px;
   }
 
@@ -383,11 +385,22 @@ li:nth-child(4) .form__checkbox-last {
   }
 
   .form__inner {
-    padding: 0;
     padding-bottom: 59px;
-    /*Временно, чтобы видеть сетку
-    border: 1px solid green;*/
+    width: @tablet-content-width;
+    margin: 0 auto;
   }
+
+  .form__bottom {
+    display: flex;
+    width: @tablet-content-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @transition-to-desktop) {
+  .form__group {
+   margin: 0 auto;
+ }
 }
 
 @media (min-width: @desktop-width) {
@@ -473,8 +486,6 @@ li:nth-child(4) .form__checkbox-last {
     margin-top: 45px;
     margin-bottom: 70px;
     flex-grow: 1;
-    /*Временно чтобы видеть сетку
-    border: 1px solid red;*/
   }
 
   .form__group--impression .form__group-heading {
@@ -485,8 +496,6 @@ li:nth-child(4) .form__checkbox-last {
     margin: 0;
     width: 100%;
     text-align: right;
-    /*Временно чтобы видеть сетку
-    border: 1px solid green;*/
   }
 
   .form__inner {
@@ -495,8 +504,6 @@ li:nth-child(4) .form__checkbox-last {
 
   .form__field-message {
     width: 100%;
-    /*Временно чтобы видеть сетку
-    border: 1px solid green;*/
   }
 
   .form__note {
@@ -505,5 +512,9 @@ li:nth-child(4) .form__checkbox-last {
 
   .form__group-content {
     align-items: center;
+  }
+
+  .form__bottom {
+    width: 960px;
   }
 }
