@@ -1,8 +1,6 @@
 .page-footer {
   text-align: center;
 
-  margin: 0;
-  padding: 0;
   padding-top: 40px;
   padding-bottom: 23px;
   padding-left: 85px;
@@ -10,23 +8,20 @@
 
   display: flex;
   flex-direction: column;
-  /* Временно, чтобы видеть сетку
-  border: 1px solid green;*/
 }
 
 .page-footer__hashtag {
   font-size: @hashtag-font-size;
   line-height: @hashtag-line-height;
   font-weight: 700;
+
+  display: block;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    padding: 0;
-    padding-top: 37px;
-    padding-bottom: 37px;
-    padding-left: @tablet-padding-side;
-    padding-right: @tablet-padding-side;
+    padding: 37px @tablet-padding-side;
 
     flex-direction: row;
     justify-content: space-around;

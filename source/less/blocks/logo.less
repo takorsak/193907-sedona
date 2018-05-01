@@ -1,13 +1,42 @@
 .logo {
-  margin: 0 auto;
-}
+  position: absolute;
 
-.logo__link {
-  position: relative;
+  top: 223px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 102px;
+  height: 83px;
+
   z-index: 1;
 }
 
-.logo__image {
-  width: 102px;
-  height: 83px;
+.logo__desktop {
+  visibility: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .logo {
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 102px;
+    height: 83px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo {
+    width: 188px;
+    height: 96px;
+  }
+
+  .logo__mobile {
+    display: none;
+  }
+
+  .logo__desktop {
+    visibility: visible;
+  }
 }

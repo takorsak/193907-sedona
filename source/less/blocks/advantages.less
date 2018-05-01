@@ -1,15 +1,10 @@
 .advantages {
   color: #333333;
-
-  margin: 0;
-  padding: 0;
 }
 
 .advantages__list {
   margin: 0;
-  padding: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 
   text-align: left;
   list-style: none;
@@ -19,6 +14,8 @@
 }
 
 .advantages__item {
+  width: 280px;
+  margin: 0 auto;
   display: block;
 }
 
@@ -34,10 +31,8 @@
 }
 
 .advantages__item-text {
-  display: inline-block;
+  display: block;
 
-  margin: 0;
-  padding: 0;
   margin-bottom: 35px;
   margin-left: 70px;
 }
@@ -105,10 +100,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages__list {
-    padding-bottom: 65px;
-
-    text-align: center;
-
+    padding: 0;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -126,8 +118,14 @@
   }
 
   .advantages__item {
-    width: @advantages-tablet-width;
+    width: 256px;
+    padding-right: 45px;
+    padding-left: 45px;
     padding-top: 165px;
+    padding-bottom: 65px;
+    box-sizing: border-box;
+
+    text-align: center;
   }
 
   .advantages__item-title,
@@ -186,12 +184,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages__list {
+  .advantages__item {
+    width: 400px;
     padding-bottom: 84px;
   }
 
-  .advantages__item {
-    width: @advantages-desktop-width;
+  .advantages__item-text {
+    width: 288px;
   }
 
   .advantages__item--housing::before {

@@ -1,6 +1,6 @@
 .promo {
-  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 363px, 50% 0;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-color: #e1eef6;
 
@@ -10,35 +10,131 @@
 }
 
 .promo--inner {
-  background-position: 50% 131px, 60% 80%;
+  background-position: 60% 80%;
   min-height: 158px;
+
+  position: relative;
 }
 
+@media (max-width: @mobile-width-only) {
+  .promo::after {
+    content: "";
 
+    position: absolute;
+    top: 362px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 323px;
+    height: 30px;
+
+    background-image: url(../img/bg-intro-triangle-mobile.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .promo--inner::after {
+    content: "";
+
+    position: absolute;
+    top: 132px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 323px;
+    height: 30px;
+
+    background-image: url(../img/bg-intro-triangle-mobile.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .promo {
-    background-image: url("../img/bg-intro-triangle.png"), url("../img/bg-back-mobile@1x.jpg");
-    background-position: 50% 465px, 50% 0;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-position: 50% 0;
     background-repeat: no-repeat;
-    background-size: 1200px;
+    background-size: cover;
 
     min-height: 521px;
   }
 
   .promo--inner {
-    background-position: 50% 233px, 60% 80%;
-    min-height: 289px;
+    background-position: 60% 80%;
+    min-height: 290px;
+  }
+
+  .promo::after {
+    content: "";
+
+    position: absolute;
+
+    top: 465px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 768px;
+    height: 61px;
+
+    background-image: url(../img/bg-intro-triangle-tablet.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .promo--inner::after {
+    content: "";
+
+    position: absolute;
+    top: 233px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 768px;
+    height: 61px;
+
+    background-image: url(../img/bg-intro-triangle-tablet.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .promo {
-    background-image: url("../img/bg-intro-triangle.png"), url("../img/bg-back-mobile@1x.jpg");
-    background-position: 50% 465px, 50% 0;
-    background-repeat: no-repeat;
-    background-size: 1200px;
+  .promo::after {
+    content: "";
 
-    min-height: 521px;
+    position: absolute;
+
+    top: 465px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1200px;
+    height: 61px;
+
+    background-image: url(../img/bg-intro-triangle-desktop.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .promo--inner {
+    background-position: 60% 80%;
+    min-height: 302px;
+  }
+
+  .promo--inner::after {
+    content: "";
+
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1200px;
+    height: 61px;
+
+    background-image: url(../img/bg-intro-triangle-desktop.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
   }
 }

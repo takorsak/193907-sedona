@@ -1,7 +1,4 @@
 .main-nav {
-  margin: 0;
-  padding: 0;
-  background-color: @text-info;
   text-align: center;
 }
 
@@ -9,6 +6,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: @text-info;
+}
+
+.main-nav__item {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .main-nav__link {
@@ -19,9 +22,16 @@
   text-decoration: none;
 }
 
+.main-nav__button {
+  /*высота временно для сетки*/;
+  height: 58px;
+  width: 25px;
+  margin-left: 277px;
+}
+
 @media (min-width: @tablet-width) {
-  .main-nav {
-    background-color: @text-light;
+  .main-nav__button {
+    display: none;
   }
 
   .main-nav__link {
@@ -29,36 +39,28 @@
   }
 
   .main-nav__list {
+    background-color: @text-light;
+
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
-  .main-nav__button {
-    display: none;
-  }
-
-  .main-nav__item:nth-child(1) {
-    margin-left: 45px;
+  .main-nav__item {
+    width: 166.5px;
   }
 
   .main-nav__item:nth-child(2) {
-    margin: auto;
-  }
-
-  .main-nav__item:nth-child(3) {
-    margin: auto;
-  }
-
-  .main-nav__item:nth-child(4) {
-    margin-right: 25px;
+    margin-right: 102px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__item:nth-child(1) {
-    margin-left: 90px;
+  .main-nav__item {
+    width: 253px;
   }
 
-  .main-nav__item:nth-child(4) {
-    margin-right: 70px;
+  .main-nav__item:nth-child(2) {
+    margin-right: 188px;
   }
 }
