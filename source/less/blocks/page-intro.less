@@ -1,8 +1,7 @@
 .page-intro {
   padding-right: @indent-side;
   padding-left: @indent-side;
-  padding-top: 42px;
-  padding-bottom: 10px;
+  padding-top: 27px;
   text-align: center;
   width: @content-width;
   margin: 0 auto;
@@ -17,7 +16,7 @@
   line-height: @title-line-height;
   font-weight: 700;
 
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .page-intro__text {
@@ -29,11 +28,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-intro__title {
+    line-height: 26px;
+    font-size: 21px;
+    margin-bottom: 30px;
+  }
+
   .page-intro {
     margin: 0 auto;
-    padding-top: 48px;
-    padding-bottom: 54px;
-    width: 489px;
+    padding-top: 34px;
+    padding-bottom: 36.5px;
+    width: 490px;
   }
 
   .page-intro--inner {
@@ -44,6 +49,10 @@
 
   .page-intro--border {
     border-bottom: none;
+  }
+
+  .page-intro__title br {
+    display: none;
   }
 }
 

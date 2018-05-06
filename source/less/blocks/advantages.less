@@ -1,10 +1,13 @@
 .advantages {
   color: #333333;
+  position: relative;
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 40px 0;
+  width: @content-width;
+  margin: 0 auto;
+  padding-top: 35px;
+  padding-bottom: 36px;
 
   text-align: left;
   list-style: none;
@@ -26,23 +29,19 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 22px;
-  margin-left: 70px;
+  margin-bottom: 15px;
+  margin-left: 30px;
 }
 
 .advantages__item-text {
   display: block;
 
-  margin-bottom: 35px;
-  margin-left: 70px;
+  margin-bottom: 29px;
+  margin-left: 30px;
 }
 
 .advantages__item-last {
   margin-bottom: 0;
-}
-
-.advantages__item--housing {
-  position: relative;
 }
 
 .advantages__item--housing::before {
@@ -60,16 +59,12 @@
   background-repeat: no-repeat;
 }
 
-.advantages__item--souvenirs {
-  position: relative;
-}
-
 .advantages__item--souvenirs::before {
   content: "";
 
   position: absolute;
-  top: 25px;
-  left: @indent-side;
+  top: 156px;
+  left: 24px;
 
   width: 35px;
   height: 40px;
@@ -79,15 +74,11 @@
   background-repeat: no-repeat;
 }
 
-.advantages__item--food {
-  position: relative;
-}
-
 .advantages__item--food::before {
   content: "";
 
   position: absolute;
-  top: 25px;
+  top: 273px;
   left: @indent-side;
 
   width: 38px;
@@ -98,11 +89,20 @@
   background-repeat: no-repeat;
 }
 
+@media (max-width: @mobile-width-only) {
+  .advantages__item--food br:nth-child(2n) {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .advantages__list {
     padding: 0;
     flex-direction: row;
     justify-content: space-around;
+    width: 768px;
+
+    text-align: center;
   }
 
   .advantages__item--housing {
@@ -118,14 +118,12 @@
   }
 
   .advantages__item {
-    width: 256px;
+    width: 350px;
     padding-right: 45px;
     padding-left: 45px;
-    padding-top: 165px;
-    padding-bottom: 65px;
+    padding-top: 154px;
+    padding-bottom: 60px;
     box-sizing: border-box;
-
-    text-align: center;
   }
 
   .advantages__item-title,
@@ -134,7 +132,9 @@
   }
 
   .advantages__item-title {
-    margin-bottom: 25px;
+    font-size: 21px;
+
+    margin-bottom: 23px;
   }
 
   .advantages__item--housing::before {
@@ -181,11 +181,32 @@
     background-position: 0 0;
     background-repeat: no-repeat;
   }
+
+  .advantages__item--food br:nth-child(2n+1) {
+    display: none;
+  }
+}
+
+@media (max-width: @pre-desktop-width-only) {
+  .advantages__item--souvenirs br {
+    display: none;
+  }
+
+  .reason--bridge .reason__text br {/*здесь тройная вложенность, но не вижу смысла задавать класс br или .reason__text*/
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__list {
+    justify-content: space-between;
+    width: 1200px;
+  }
+
   .advantages__item {
     width: 400px;
+    padding-right: 55px;
+    padding-left: 55px;
     padding-bottom: 84px;
   }
 
