@@ -1,6 +1,4 @@
 .commercial__content {
-  text-align: center;
-
   padding-top: 33px;
   padding-bottom: 50px;
   padding-right: @indent-side;
@@ -21,31 +19,41 @@
   display: inline-block;
   margin: 0;
   padding: 0;
+
   line-height: @text-line-height;
+
+  display: block;
+  width: @content-width;
+  margin: 0 auto;
 }
 
 .commercial__link {
   text-decoration: none;
   display: inline-block;
   margin-top: 40px;
+
 }
 
 .commercial__map {
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #cbe0a4;
 
   min-height: 350px;
 }
 
 .commercial__video {
-  margin: 0;
-  padding: 0;
   background-image: url("../img/video-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
 
-  min-height: 200px;
+  display: block;
+  height: 200px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -61,17 +69,19 @@
     background-color: #cbe0a4;
     background-size: @tablet-width;
   }
+}
 
-  .commercial--inner {
-    padding-left: @tablet-padding-side;
-    padding-right: @tablet-padding-side;
+@media (min-width: @tablet-width) {
+  .commercial__text,
+  .commercial__link {
+    width: 460px;
+  }
 
-    width: @tablet-content-width;
+  .commercial--inner .commercial__text {
+    width: 430px;
   }
 
   .commercial__video {
-    margin: 0;
-    padding: 0;
     background-image: url("../img/video-mobile@1x.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -85,6 +95,7 @@
 
 @media (min-width: @desktop-width) {
   .commercial__content {
+
     margin: 0;
     padding: 0;
     padding-top: 57px;
@@ -119,8 +130,6 @@
   }
 
   .commercial__video {
-    margin: 0;
-    padding: 0;
     background-image: url("../img/video-mobile@1x.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;

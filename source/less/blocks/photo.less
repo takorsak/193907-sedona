@@ -1,6 +1,16 @@
-.photo {
-  margin: 0;
-  padding: 0;
+.photo__wrapper {
+  border-top: @border;
+}
+
+.photo__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo__meta {
+  padding-top: 15px;
+  width: @content-width;
+  margin: 0 auto;
 }
 
 .photo__description {
@@ -17,31 +27,35 @@
 
 @media (min-width: @tablet-width) {
   .photo {
-    margin: 0;
-    padding: 0;
-    margin-right: @tablet-padding-side;
-    margin-left: @tablet-padding-side;
+    padding-right: @tablet-padding-side;
+    padding-left: @tablet-padding-side;
   }
 
   .photo__wrapper {
     display: flex;
     flex-wrap: wrap;
+
     /*временно для сетки
     border: 1px solid yellow;*/
   }
 
   .photo__meta {
+
     padding-bottom: 20px;
     display: flex;
     justify-content: space-around;
+    width: @tablet-item-width;
 
     background-color: #f2f2f2;
   }
 
+  .promo-photo--first .photo__meta {
+    width: @tablet-content-width;
+  }
+
   .photo__description {
-    display: flex;
-    flex-direction: column;
     width: 200px;
+    padding-left: @indent-side;
 
     flex-grow: 1;
 
@@ -51,7 +65,6 @@
 
 @media (min-width: @desktop-width) {
   .photo {
-    margin: 0;
     padding: 0;
   }
 
@@ -67,8 +80,13 @@
     background-color: #000000;
     opacity: 0.5;
 
-    position: relative;
+    width: 400px;
+
+    position: absolute;
     z-index: 1;
+    top: 185px;
+    left: 0;
+  }
 
     margin-top: -82px;
   }

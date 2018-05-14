@@ -5,7 +5,6 @@
 
 .form__group {
   border: none;
-  margin: 0;
   margin-top: @indent-top;
   padding: 0;
   padding-top: @indent-top;
@@ -20,6 +19,7 @@
 }
 
 .form__group-heading {
+
   margin: 0;
   padding: 0;
   text-align: center;
@@ -35,12 +35,19 @@
   line-height: @title-line-height;
   font-weight: 400;
 
-  margin:0;
+  margin: 0;
   padding: 0;
-  display: inline-block;
   padding-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  display: inline-block;
+}
+
+.form__title-phone {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
 }
 
 .form__title-phone {
@@ -50,14 +57,12 @@
 }
 
 .form__group-item {
-  width: 280px;
+  width: @content-width;
   display: flex;
 }
 
 .form__radio-title,
 .form__checkbox-title {
-  margin: 0;
-  padding: 0;
   font-size: @placeholder-font-size;
   line-height: @placeholder-line-height;
   font-weight: 700;
@@ -91,12 +96,28 @@ li:nth-child(4) .form__checkbox-last {
   margin-bottom: 15px;
 }
 
-.form__field {
+li:nth-child(1) .form__checkbox-last {
+  margin-top: 17px;
+}
+
+li:nth-child(4) .form__checkbox-last {
+  margin-bottom: 17px;
+}
+
+.form__title-email {
   margin: 0;
   padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form__field {
   font-size: @placeholder-font-size;
   line-height: @placeholder-line-height;
   font-weight: 700;
+
+  margin: 0;
+  padding: 16px @indent-side;
 
   border: 0;
   outline: none;
@@ -104,6 +125,8 @@ li:nth-child(4) .form__checkbox-last {
   padding: 16px @indent-side;
 
   background-color: @semi-dark;
+
+  display: block;
 
   .form__field()
 }
@@ -144,8 +167,10 @@ li:nth-child(4) .form__checkbox-last {
 }
 
 .form__inner {
+
   margin: 0;
   padding: 0;
+
   padding-top: @indent-top;
   padding-bottom: @padding-bottom;
   text-align: center;
@@ -209,6 +234,18 @@ li:nth-child(4) .form__checkbox-last {
   visibility: hidden;
 }
 
+@media (max-width: @mobile-width-only) {
+  .form__group {
+    margin: 0 auto;
+    width: @content-width;
+    margin-top: @indent-top;
+    padding: 0;
+    padding-top: @indent-top;
+    padding-bottom: @padding-bottom;
+    border-bottom: @border;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .form {
     display: flex;
@@ -221,6 +258,9 @@ li:nth-child(4) .form__checkbox-last {
 
   .form__group--name {
     order: 0;
+
+    padding-left: 58px;
+    box-sizing: border-box;
   }
 
   .form__group {
@@ -238,11 +278,6 @@ li:nth-child(4) .form__checkbox-last {
     width: 265px;
   }
 
-  .form__group--name {
-    padding-left: 58px;
-    box-sizing: border-box;
-  }
-
   .form__group-heading {
     text-align: left;
   }
@@ -250,6 +285,14 @@ li:nth-child(4) .form__checkbox-last {
   .form__group--contacts .form__group-heading,
   .form__group--attractions .form__group-heading {
     text-align: center;
+    width: 400px;
+    padding-right: 55px;
+    padding-left: 55px;
+  }
+
+  .form__group--contacts .form__group-heading {
+    display: inline-block;
+    margin-bottom: 36px;
   }
 
   .form__group--contacts .form__group-heading {
@@ -285,28 +328,35 @@ li:nth-child(4) .form__checkbox-last {
   }
 
   .form__group--attractions .form__group-list {
-    width: 459px;
     margin: 0;
     padding: 0;
     margin-left: 96px;
     margin-right: 96px;
+    width: 459px;
+
     display: flex;
     flex-wrap: wrap;
   }
 
   .form__group--attractions .form__group-item {
-    width: 228px;
     margin: 0;
     padding: 0;
+    width: 228px;
   }
 
   .form__field-message {
     width: @tablet-content-width;
+    margin-top: 60px;
+
     box-sizing: border-box;
   }
 
   .form__note {
     visibility: visible;
+
+    margin: 0;
+    margin-top: 24px;
+
     display: inline-block;
     width: @tablet-item-width;
     text-align: right;
@@ -387,13 +437,84 @@ li:nth-child(4) .form__checkbox-last {
     margin: 0;
     margin-top: 60px;
   }
+
+  .form__group--name .form__group-heading,
+  .form__group--impression .form__group-heading {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  li:nth-child(1) .form__radio-title {
+    margin-bottom: 28px;
+  }
+
+  li:nth-child(2) .form__radio-title {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  li:nth-child(3) .form__radio-title {
+    margin-top: 28px;
+  }
+
+  .form__title-email {
+    margin-top: 30px;
+  }
+
+  .form__field-email {
+    margin-bottom: 56px;
+  }
+
+  li:nth-child(1) .form__checkbox-title {
+    margin-top: 62px;
+    margin-bottom: 35px;
+  }
+
+  li:nth-child(2) .form__checkbox-title {
+    margin-top: 62px;
+    margin-bottom: 35px;
+  }
+
+  li:nth-child(3) .form__checkbox-title {
+    margin-top: 35px;
+    margin-bottom: 90px;
+  }
+
+  li:nth-child(4) .form__checkbox-title {
+    margin-top: 35px;
+    margin-bottom: 90px;
+  }
+
+  .form__checkbox-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form__inner {
+    padding-bottom: 59px;
+    width: @tablet-content-width;
+    margin: 0 auto;
+  }
+
+  .form__bottom {
+    display: flex;
+    width: @tablet-content-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @transition-to-desktop) {
+  .form__group {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form__group--name .form__group-item,
   .form__group--impression .form__group-item {
     width: 400px;
-   }
+  }
 
   .form__group--name,
   .form__group--impression {
@@ -411,8 +532,6 @@ li:nth-child(4) .form__checkbox-last {
   }
 
   .form__group--contacts .form__item-contacts {
-    margin: 0;
-    padding: 0;
     width: 400px;
     margin-right: 80px;
     margin-bottom: 52px;
@@ -472,7 +591,6 @@ li:nth-child(4) .form__checkbox-last {
   .form__group--attractions .form__group-list {
     width: 960px;
     margin: 0;
-    padding: 0;
   }
 
   .form__group--attractions .form__group-item {

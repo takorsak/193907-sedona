@@ -1,4 +1,5 @@
 .promo-photo {
+
   margin: 0;
   padding: 0;
   padding-top: @indent-top;
@@ -7,15 +8,10 @@
   padding-left: @indent-side;
 
   border-bottom: @border;
-
   text-align: left;
 
   /*временно для сетки
   border: 1px solid red;*/
-}
-
-.promo-photo--border {
-  border-top: @border;
 }
 
 .promo-photo__title {
@@ -66,14 +62,14 @@
 
 .promo-photo__image {
   display: block;
-  width: 280px;
+  width: @content-width;
   height: 280px;
   background-color: #eeb170;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .promo-photo {
-    margin: 0;
     padding: 0;
     border-bottom: none;
 
@@ -81,10 +77,6 @@
 
     /*временно для сетки
     border: 1px solid green;*/
-  }
-
-  .promo-photo--border {
-    border: none;
   }
 
   .promo-photo--first {
@@ -97,6 +89,10 @@
     width: 100%;
   }
 
+  .promo-photo--first .promo-photo__image {
+    height: 400px;
+  }
+
   .promo-photo__like {
     width: 86px;
     box-sizing: border-box;
@@ -105,11 +101,12 @@
 
 @media (min-width: @desktop-width) {
   .promo-photo--first {
-    width: 1200px;
+    width: @desktop-width;
   }
 
   .promo-photo {
     flex-grow: 1;
+    position: relative;
   }
 
   .promo-photo__like {
@@ -117,10 +114,9 @@
     box-sizing: border-box;
     /* временно для сетки
     border: 1px solid white;*/
-
   }
 
   .promo-photo__image {
-    position: relative;
+    height: 267px;
   }
 }
