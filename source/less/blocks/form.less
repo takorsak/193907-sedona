@@ -5,6 +5,13 @@
 
 .form__group {
   border: none;
+  margin-top: @indent-top;
+  padding: 0;
+  padding-top: @indent-top;
+  padding-bottom: @padding-bottom;
+  border-bottom: @border;
+  padding-left: @indent-side;
+  padding-right: @indent-side;
 }
 
 .form__group-wrapper {
@@ -12,14 +19,15 @@
 }
 
 .form__group-heading {
-  font-size: @title-font-size;
-  line-height: @title-line-height;
-  font-weight: 700;
 
   margin: 0;
   padding: 0;
-
   text-align: center;
+  font-size: @title-font-size;
+  line-height: @title-line-height;
+  font-weight: 700;
+  /* Временно, чтобы видеть сетку
+  border: 1px solid green;*/
 }
 
 .form__group-title {
@@ -42,6 +50,12 @@
   margin-bottom: 15px;
 }
 
+.form__title-phone {
+  margin:0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
 .form__group-item {
   width: @content-width;
   display: flex;
@@ -52,13 +66,9 @@
   font-size: @placeholder-font-size;
   line-height: @placeholder-line-height;
   font-weight: 700;
-
-  margin: 0;
-  padding: 0;
-  margin-left: 80px;
-
   text-transform: none;
   display: inline-block;
+  margin-left: 80px;
 }
 
 .form__radio-title {
@@ -86,6 +96,21 @@ li:nth-child(4) .form__checkbox-last {
   margin-bottom: 15px;
 }
 
+li:nth-child(1) .form__checkbox-last {
+  margin-top: 17px;
+}
+
+li:nth-child(4) .form__checkbox-last {
+  margin-bottom: 17px;
+}
+
+.form__title-email {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .form__field {
   font-size: @placeholder-font-size;
   line-height: @placeholder-line-height;
@@ -96,6 +121,9 @@ li:nth-child(4) .form__checkbox-last {
 
   border: 0;
   outline: none;
+
+  padding: 16px @indent-side;
+
   background-color: @semi-dark;
 
   display: block;
@@ -139,12 +167,15 @@ li:nth-child(4) .form__checkbox-last {
 }
 
 .form__inner {
-  width: @content-width;
-  margin: 0 auto;
+
+  margin: 0;
+  padding: 0;
+
   padding-top: @indent-top;
   padding-bottom: @padding-bottom;
-
   text-align: center;
+  /*Временно, чтобы видеть сетку
+  border: 1px solid green;*/
 }
 
 .form__field-message {
@@ -264,6 +295,11 @@ li:nth-child(4) .form__checkbox-last {
     margin-bottom: 36px;
   }
 
+  .form__group--contacts .form__group-heading {
+    display: inline-block;
+    margin-bottom: 36px;
+  }
+
   .form__group--contacts {
     margin: 0;
     padding: 0;
@@ -324,6 +360,82 @@ li:nth-child(4) .form__checkbox-last {
     display: inline-block;
     width: @tablet-item-width;
     text-align: right;
+    margin: 0;
+    margin-top: 24px;
+  }
+
+  .form__group--name .form__group-heading,
+  .form__group--impression .form__group-heading {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  li:nth-child(1) .form__radio-title {
+    margin-bottom: 28px;
+  }
+
+  li:nth-child(2) .form__radio-title {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  li:nth-child(3) .form__radio-title {
+    margin-top: 28px;
+  }
+
+  .form__title-email {
+    margin-top: 30px;
+  }
+
+  .form__field-email {
+    margin-bottom: 56px;
+  }
+
+  .form__group--attractions .form__group-heading,
+  .form__group--contacts .form__group-heading {
+    width: 400px;
+    padding-right: 55px;
+    padding-left: 55px;
+  }
+
+  li:nth-child(1) .form__checkbox-title {
+    margin-top: 62px;
+    margin-bottom: 35px;
+  }
+
+  li:nth-child(2) .form__checkbox-title {
+    margin-top: 62px;
+    margin-bottom: 35px;
+  }
+
+  li:nth-child(3) .form__checkbox-title {
+    margin-top: 35px;
+    margin-bottom: 90px;
+  }
+
+  li:nth-child(4) .form__checkbox-title {
+    margin-top: 35px;
+    margin-bottom: 90px;
+  }
+
+  .form__checkbox-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form__inner {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 59px;
+    text-align: center;
+    /*Временно, чтобы видеть сетку
+    border: 1px solid green;*/
+  }
+
+  .form__field-message {
+    margin: 0;
+    margin-top: 60px;
   }
 
   .form__group--name .form__group-heading,
@@ -436,6 +548,10 @@ li:nth-child(4) .form__checkbox-last {
     width: 70%;
   }
 
+  .form__phone,
+  .form__email {
+  }
+
   .form__field-email {
     width: 80%;
     margin-bottom: 0;
@@ -461,7 +577,7 @@ li:nth-child(4) .form__checkbox-last {
 
   .form__email {
     width: 63px;
-  }
+}
 
   .form__title-phone,
   .form__title-email {
@@ -481,6 +597,8 @@ li:nth-child(4) .form__checkbox-last {
     margin-top: 45px;
     margin-bottom: 70px;
     flex-grow: 1;
+    /*Временно чтобы видеть сетку
+    border: 1px solid red;*/
   }
 
   .form__group--impression .form__group-heading {
@@ -491,6 +609,8 @@ li:nth-child(4) .form__checkbox-last {
     margin: 0;
     width: 100%;
     text-align: right;
+    /*Временно чтобы видеть сетку
+    border: 1px solid green;*/
   }
 
   .form__inner {
@@ -499,6 +619,9 @@ li:nth-child(4) .form__checkbox-last {
 
   .form__field-message {
     width: 100%;
+    box-sizing: border-box;
+    /*Временно чтобы видеть сетку
+    border: 1px solid green;*/
   }
 
   .form__note {
@@ -507,9 +630,5 @@ li:nth-child(4) .form__checkbox-last {
 
   .form__group-content {
     align-items: center;
-  }
-
-  .form__bottom {
-    width: 960px;
   }
 }

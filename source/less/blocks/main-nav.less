@@ -1,4 +1,7 @@
 .main-nav {
+  margin: 0;
+  padding: 0;
+  background-color: @text-info;
   text-align: center;
 }
 
@@ -22,14 +25,19 @@
   text-decoration: none;
 }
 
-.main-nav__button {
-  /*высота временно для сетки*/
-  height: 58px;
-  width: 25px;
-  margin-left: 277px;
-}
-
 @media (min-width: @tablet-width) {
+  .main-nav {
+    background-color: @text-light;
+  }
+
+  .main-nav__link {
+    color: @text-dark;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
   .main-nav__button {
     display: none;
   }
@@ -61,8 +69,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__item {
-    width: 253px;
+
+  .main-nav__item:nth-child(1) {
+    margin-left: 90px;
+  }
+}
   }
 
   .main-nav__item:nth-child(2) {

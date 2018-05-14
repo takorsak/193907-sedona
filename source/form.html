@@ -25,12 +25,13 @@
             <a class="main-nav__link" href="https://htmlacademy.ru/">html academy</a>
           </li>
         </ul>
-        <a class="logo logo__link">
-          <img class="logo__image logo__mobile" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта Седона">
-          <img class="logo__image logo__desktop" src="img/logotype-desktop.png" width="188" height="96" alt="Логотип сайта Седона">
-        </a>
-        <button class="main-nav__button" type="button">Меню</button>
+        <button class="main-nav__button--close main-nav__button--open" type="button">Меню</button>
       </nav>
+      <div class="logo page-header__logo">
+        <a class="logo__link" href="index.html">
+          <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта Седона">
+        </a>
+      </div>
     </header>
     <main>
       <div class="promo promo--inner">Баннер</div>
@@ -127,10 +128,8 @@
               <label class="form__group-heading" for="review">Опишите свои эмоции:</label>
               <textarea class="form__field form__field-message" id="review" name="review" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
-            <div class="form__bottom">
-              <button class="button page-form__button" type="submit">Отправить отзыв</button>
-              <div class="form__note">* — Обязательные поля</div>
-            </div>
+            <button class="button page-form__button" type="submit">Отправить отзыв</button>
+            <div class="form__note">* — Обязательные поля</div>
           </form>
         </div>
       </section>

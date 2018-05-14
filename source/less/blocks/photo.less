@@ -13,6 +13,18 @@
   margin: 0 auto;
 }
 
+.photo__description {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.photo__meta {
+  padding-top: 15px;
+  /*временно для сетки
+  border: 1px solid red;*/
+}
+
 @media (min-width: @tablet-width) {
   .photo {
     padding-right: @tablet-padding-side;
@@ -22,12 +34,13 @@
   .photo__wrapper {
     display: flex;
     flex-wrap: wrap;
-    border: none;
+
+    /*временно для сетки
+    border: 1px solid yellow;*/
   }
 
   .photo__meta {
-    padding-right: 0;
-    padding-left: 0;
+
     padding-bottom: 20px;
     display: flex;
     justify-content: space-around;
@@ -45,6 +58,8 @@
     padding-left: @indent-side;
 
     flex-grow: 1;
+
+    padding-left: @indent-side;
   }
 }
 
@@ -55,6 +70,8 @@
 
   .photo__wrapper {
     padding-top: 10px;
+    /*временно для сетки
+    border: 1px solid yellow;*/
   }
 
   .photo__meta {
@@ -71,9 +88,6 @@
     left: 0;
   }
 
-  .promo-photo--first .photo__meta {
-    top: 318px;
-    left: 0;
-    width: @desktop-width;
+    margin-top: -82px;
   }
 }

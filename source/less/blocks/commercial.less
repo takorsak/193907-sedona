@@ -3,22 +3,23 @@
   padding-bottom: 50px;
   padding-right: @indent-side;
   padding-left: @indent-side;
-
-  text-align: center;
 }
 
 .commercial__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
   font-size: @heading-font-size;
   line-height: @heading-line-height;
   font-weight: 700;
-
-  padding: 0;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: @content-width;
+  text-align: center;
 }
 
 .commercial__text {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
   line-height: @text-line-height;
 
   display: block;
@@ -28,14 +29,9 @@
 
 .commercial__link {
   text-decoration: none;
-  display: block;
-  width: @content-width;
-  margin: 0 auto;
+  display: inline-block;
   margin-top: 40px;
-}
 
-.commercial--inner .commercial__text {
-  width: 240px;
 }
 
 .commercial__map {
@@ -60,9 +56,18 @@
   margin: 0 auto;
 }
 
-@media (max-width: @mobile-width-only) {
-  .commercial__text br {
-    display: none;
+@media (min-width: @tablet-width) {
+  .commercial__text {
+    width: 440px;
+  }
+
+  .commercial__link {
+    width: 460px;
+  }
+
+  .commercial__map {
+    background-color: #cbe0a4;
+    background-size: @tablet-width;
   }
 }
 
@@ -90,8 +95,38 @@
 
 @media (min-width: @desktop-width) {
   .commercial__content {
+
+    margin: 0;
+    padding: 0;
     padding-top: 57px;
     padding-bottom: 67px;
+    /*временно для сетки
+    border: 1px solid red;*/
+  }
+
+  .commercial__text {
+    width: 440px;
+    margin: 0 auto;
+    /*временно для сетки
+    border: 1px solid red;*/
+  }
+
+  .commercial__link {
+    width: 460px;
+    margin-left: 372px;
+    margin-right: 372px;
+  }
+
+  .commercial__map {
+    background-color: #cbe0a4;
+    background-size: @desktop-width;
+  }
+
+  .commercial--inner {
+    padding-left: @desktop-padding-side;
+    padding-right: @desktop-padding-side;
+
+    width: 960px;
   }
 
   .commercial__video {
@@ -103,5 +138,8 @@
 
     height: 500px;
     width: 800px;
+
+    margin-left: @desktop-commercial-padding;
+    margin-right: @desktop-commercial-padding;
   }
 }
