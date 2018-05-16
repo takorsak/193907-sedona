@@ -2,6 +2,12 @@
   padding-bottom: 68px;
 }
 
+.commercial--photo .commercial__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
 .commercial__content {
   padding-top: 25px;
   padding-bottom: 47px;
@@ -53,18 +59,33 @@
 
 .commercial__map {
   background-image: url("../img/bg-map-mobile@1x.jpg");
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-
-  background-color: #cbe0a4;
-
+  background-color: #f3f1ed;
   height: 350px;
+
+  position: relative;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.jpg");
     background-size: cover;
   }
+}
+
+.commercial__map::after {
+  position: absolute;
+  content: "";
+
+  position: absolute;
+  top: 45%;
+  left: 48%;
+
+  width: 28px;
+  height: 28px;
+
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
 }
 
 .commercial__video {
@@ -93,6 +114,10 @@
   .commercial__content {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  .commercial--photo .commercial__wrapper {
+    width: 768px;
   }
 
   .commercial--photo .commercial__content {
@@ -138,6 +163,11 @@
     }
   }
 
+  .commercial__map::after {
+    top: 45%;
+    left: 49%;
+  }
+
   .commercial__video {
     background-image: url("../img/video-tablet@1x.jpg");
     background-size: @tablet-content-width 499px;
@@ -156,6 +186,10 @@
     padding-bottom: 80px;
   }
 
+  .commercial--photo .commercial__wrapper {
+    width: 1200px;
+  }
+
   .commercial__content {
     padding-top: 57px;
     padding-bottom: 67px;
@@ -163,6 +197,7 @@
 
   .commercial--photo .commercial__content {
     padding-top: 40px;
+    padding-bottom: 70px;
   }
 
   .commercial__link {
@@ -177,10 +212,15 @@
     }
   }
 
+  .commercial__map::after {
+    top: 45%;
+    left: 49%;
+  }
+
   .commercial__video {
     background-image: url("../img/video-desktop@1x.jpg");
-    background-size: 800px 500px;
-    height: 500px;
+    background-size: 800px 498px;
+    height: 498px;
     width: 800px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
