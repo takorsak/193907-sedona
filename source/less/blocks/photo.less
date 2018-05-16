@@ -1,5 +1,6 @@
 .photo__wrapper {
   border-top: @border;
+  margin: 0 auto;
 }
 
 .photo__description {
@@ -13,18 +14,6 @@
   margin: 0 auto;
 }
 
-.photo__description {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.photo__meta {
-  padding-top: 15px;
-  /*временно для сетки
-  border: 1px solid red;*/
-}
-
 @media (min-width: @tablet-width) {
   .photo {
     padding-right: @tablet-padding-side;
@@ -34,13 +23,13 @@
   .photo__wrapper {
     display: flex;
     flex-wrap: wrap;
-
-    /*временно для сетки
-    border: 1px solid yellow;*/
+    border: none;
+    width: @tablet-content-width;
   }
 
   .photo__meta {
-
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 20px;
     display: flex;
     justify-content: space-around;
@@ -58,8 +47,6 @@
     padding-left: @indent-side;
 
     flex-grow: 1;
-
-    padding-left: @indent-side;
   }
 }
 
@@ -69,16 +56,12 @@
   }
 
   .photo__wrapper {
+    width: @desktop-width;
     padding-top: 10px;
-    /*временно для сетки
-    border: 1px solid yellow;*/
   }
 
   .photo__meta {
-    color: #ffffff;
-
-    background-color: #000000;
-    opacity: 0.5;
+    background-color: rgba(0,0,0,0.5);
 
     width: 400px;
 
@@ -88,6 +71,13 @@
     left: 0;
   }
 
-    margin-top: -82px;
+  .photo__description {
+    color: #ffffff;
+  }
+
+  .promo-photo--first .photo__meta {
+    top: 318px;
+    left: 0;
+    width: @desktop-width;
   }
 }
