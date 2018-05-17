@@ -74,16 +74,14 @@
                     <ul class="form__group-list">
                       <li class="form__group-item form__item-contacts">
                         <label class="form__group-title form__title-phone" for="phone-number"><span>Контактный</span> телефон*:</label>
-                        <div class="form__group-content">
+                        <div class="form__group-content form__group-phone">
                           <input class="form__field form__field-phone" id="phone-number" name="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" required>
-                          <div class="form__phone"><span class="visually-hidden">Иконка телефона</span></div>
                         </div>
-                      </li>
-                      <li class="form__group-item form__item-contacts">
-                        <label class="form__group-title form__title-email" for="email">Электронная почта*:</label>
-                        <div class="form__group-content">
+                        </li>
+                        <li class="form__group-item form__item-contacts">
+                          <label class="form__group-title form__title-email" for="email">Электронная почта*:</label>
+                        <div class="form__group-content form__group-email">
                           <input class="form__field form__field-email" id="email" name="email" type="email" placeholder="Введите e-mail" required>
-                          <div class="form__email"><span class="visually-hidden">Иконка почты</span></div>
                         </div>
                       </li>
                     </ul>
@@ -96,16 +94,16 @@
                   <div class="form__group-wrapper">
                     <ul class="form__group-list">
                       <li class="form__group-item">
-                        <label class="form__radio-title" for="positive">Скорее положительное</label>
                         <input class="form__radio visually-hidden" id="positive" type="radio" name="positive" value="positive" checked>
+                        <label class="form__radio-title" for="positive">Скорее положительное</label>
                       </li>
                       <li class="form__group-item">
-                        <label class="form__radio-title" for="negative">Скорее отрицательное</label>
                         <input class="form__radio visually-hidden" id="negative" type="radio" name="negative" value="negative">
+                        <label class="form__radio-title" for="negative">Скорее отрицательное</label>
                       </li>
                       <li class="form__group-item">
-                        <label class="form__radio-title" for="neutral">Затрудняюсь ответить</label>
                         <input class="form__radio visually-hidden" id="neutral" type="radio" name="neutral" value="neutral">
+                        <label class="form__radio-title" for="neutral">Затрудняюсь ответить</label>
                       </li>
                     </ul>
                 </div>
@@ -117,20 +115,20 @@
                   <div class="form__group-wrapper">
                     <ul class="form__group-list">
                       <li class="form__group-item">
-                        <label class="form__checkbox-title" for="bridge">Мост Дьявола</label>
                         <input class="form__checkbox visually-hidden" id="bridge" type="checkbox" name="bridge" value="bridge" checked>
+                        <label class="form__checkbox-title form__checkbox-bridge" for="bridge">Мост Дьявола</label>
                       </li>
                       <li class="form__group-item">
-                        <label class="form__checkbox-title" for="mountain">Гора-Колокол</label>
                         <input class="form__checkbox visually-hidden" id="mountain" type="checkbox" name="mountain" value="mountain" checked>
+                        <label class="form__checkbox-title form__checkbox-mountain" for="mountain">Гора-Колокол</label>
                       </li>
                       <li class="form__group-item">
-                        <label class="form__checkbox-title" for="park">Слайд-парк</label>
                         <input class="form__checkbox visually-hidden" id="park" type="checkbox" name="park" value="park" checked>
+                        <label class="form__checkbox-title form__checkbox-park" for="park">Слайд-парк</label>
                       </li>
                       <li class="form__group-item">
-                        <label class="form__checkbox-title  form__checkbox-last" for="rocks">Красные скалы</label>
                         <input class="form__checkbox visually-hidden" id="rocks" type="checkbox" name="rocks" value="rocks">
+                        <label class="form__checkbox-title  form__checkbox-last" for="rocks">Красные скалы</label>
                       </li>
                     </ul>
                 </div>
