@@ -183,35 +183,16 @@
   padding: 0;
   margin-left: 22px;
   margin-bottom: 8px;
-}
-
-.form__title-email {
-  padding: 0;
-  margin-top: 11px;
-  margin-left: 22px;
-  margin-bottom: 8px;
-}
-
-.form__group-content {
-  padding: 0;
-  margin: 0;
-  display: flex;
   position: relative;
 }
 
-.form__field-phone {
-  padding-top: 14px;
-  padding-bottom: 18px;
-  width: 100%;
-}
-
-.form__group-phone::after {
+.form__title-phone::after {
   content: "";
 
   position: absolute;
   display: block;
-  top: 0;
-  left: 225px;
+  top: 34px;
+  left: 200px;
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
@@ -220,25 +201,43 @@
   background-repeat: no-repeat;
 }
 
-.form__field-email {
-  width: 100%;
-  padding-top: 14px;
-  padding-bottom: 18px;
+.form__title-email {
+  padding: 0;
+  margin-top: 11px;
+  margin-left: 22px;
+  margin-bottom: 8px;
+  position: relative;
 }
 
-.form__group-email::after {
+.form__title-email::after {
   content: "";
 
   position: absolute;
   display: block;
-  top: 0;
-  left: 225px;
+  top: 34px;
+  left: 200px;
   width: 58px;
   height: 58px;
   background-color: #e6e6e6;
   background-image: url("../img/icon-mail.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+.form__field-phone {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 19px;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.form__field-email {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 19px;
+  width: 280px;
+  box-sizing: border-box;
 }
 
 .form__inner {
@@ -329,6 +328,16 @@
     border-bottom: @border;
   }
 
+  .form__field-phone,
+  .form__field-email {
+    width: 648px;
+  }
+
+  .form__title-phone::after,
+  .form__title-email::after {
+    left: 570px;
+  }
+
   .form__inner .form__group-heading {
     position: absolute;
     top: 1580px;
@@ -372,7 +381,7 @@
     flex-wrap: wrap;
   }
 
-  .form__group--contacts .form__item-contacts {
+  .form__item-contacts {
     margin: 0;
     padding: 0;
     width: @tablet-content-width;
@@ -482,7 +491,7 @@
     left: 45px;
   }
 
-  .form__item-contacts:nth-child(2) .form__group-content {
+  .form__item-contacts:nth-child(2) {
     margin-bottom: 50px;
   }
 
@@ -492,11 +501,6 @@
 
   .form__field-sername {
     padding-top: 10px;
-  }
-
-  .form__group-phone::after,
-  .form__group-email::after {
-    left: 590px;
   }
 
   .form__field-patronym {
@@ -602,15 +606,17 @@
     width: 240px;
   }
 
-  .form__group--contacts .form__item-contacts {
+  .form__item-contacts:nth-child(1) {
     width: 400px;
     margin-right: 80px;
+    margin-bottom: 50px;
   }
 
-  .form__group--contacts .form__item-contacts:nth-child(2) {
+  .form__item-contacts:nth-child(2) {
     margin: 0;
     padding: 0;
     width: 480px;
+    margin-bottom: 50px;
   }
 
   .form__title-phone,
@@ -621,12 +627,14 @@
     padding-bottom: 15px;
   }
 
-  .form__group-content {
-    align-items: center;
+  .form__title-phone::after {
+    top: 0;
+    left: 342px;
   }
 
-  .form__item-contacts:nth-child(1) .form__group-content {
-    margin-bottom: 50px;
+  .form__title-email::after {
+    top: 0;
+    left: 422px;
   }
 
   .form__title-phone span {
@@ -723,21 +731,16 @@
   .form__field-phone {
     padding-top: 17px;
     padding-bottom: 16px;
+    width: 315px;
   }
 
   .form__field-email {
     padding-top: 17px;
     padding-bottom: 16px;
     margin-bottom: 0;
+    width: 315px;
   }
 
-  .form__group-phone::after {
-    left: 256px;
-  }
-
-  .form__group-email::after {
-    left: 256px;
-  }
 
   .form__field-message {
     width: 100%;
