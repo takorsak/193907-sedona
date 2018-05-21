@@ -1,16 +1,35 @@
 .copyright {
-  width: 130px;
+  width: 140px;
   margin: 0 auto;
 
   display: flex;
+  position: relative;
 }
 
 .copyright__content {
   line-height: @title-line-height;
+  display: block;
+  margin-right: 40px;
 }
 
-.copyright__icon {
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+.copyright__icon svg {
+  position: absolute;
+
+  top: 10px;
+  left: 108px;
+
+  width: 27px;
+  height: 34px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin: 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+
+  .copyright__icon svg {
+    left: 111px;
+  }
 }
