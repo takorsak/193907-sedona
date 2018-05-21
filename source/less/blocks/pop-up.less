@@ -5,6 +5,7 @@
   padding-top: 40px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
+  display: none;
 }
 
 .pop-up__button {
@@ -48,6 +49,20 @@
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 22px;
+}
+
+.pop-up--failure {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.pop-up--success {
+  position: fixed;
+  top: 326px;
+  left: 0;
+  background-color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
@@ -96,5 +111,29 @@
 
   .pop-up--failure br {
     display: none;
+  }
+
+  .pop-up--failure {
+    top: 290px;
+    left: 183px;
+    z-index: 2;
+  }
+
+  .pop-up--success {
+    top: 20px;
+    left: 64px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pop-up--failure {
+    top: 290px;
+    left: 400px;
+    z-index: 2;
+  }
+
+  .pop-up--success {
+    top: 20px;
+    left: 280px;
   }
 }

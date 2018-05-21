@@ -85,6 +85,16 @@
 
   background-image: url("../img/icon-map-marker.svg");
   background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.commercial__interactive-map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 .commercial__video {
@@ -109,17 +119,15 @@
 .commercial__scrolling-slider {
   width: 235px;
   margin: 0 auto;
-  height: 3px;
+  height: 2px;
+  padding-top: 1px;
   background: rgba(133, 133, 133, 0.6);
   margin-top: 20px;
 }
 
-.commercial__scrolling-slider::after {
-  content: "";
-
-  position: absolute;
-  top: 17px;
-  left: 60px;
+.commercial__scrolling-toggle {
+  margin-left: 114px;
+  margin-top: -4px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -259,11 +267,6 @@ polygon {
     width: 390px;
     margin-left: 94px;
     margin-top: 45px;
-  }
-
-  .commercial__scrolling-slider::after {
-    top: 42px;
-    left: 206px;
   }
 
   .commercial__scrolling-images {
