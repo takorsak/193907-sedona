@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
@@ -7,7 +5,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "source/css/style.css": "source/less/style.less"
+          "build/css/style.css": "source/less/style.less"
         }
       }
     },
@@ -19,7 +17,7 @@ module.exports = function(grunt) {
             require("autoprefixer")()
           ]
         },
-        src: "source/css/*.css"
+        src: "build/css/*.css"
       }
     },
 
@@ -27,27 +25,27 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "source/*.html",
-            "source/css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: "source/",
-          watchTask: true,
-          notify: false,
-          open: true,
-          cors: true,
-          ui: false
+          server: "build/",
+          watchTask: true
         }
       }
     },
 
     watch: {
+      html: {
+        files: ["source/*.html"],
+        tasks: ["posthtml"]
+      },
       style: {
         files: ["source/less/**/*.less"],
-        tasks: ["less", "postcss"]
+        tasks: ["less", "postcss", "csso"]
       }
-    }
+    },
 
     csso: {
       style: {
@@ -55,10 +53,10 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "source/css/style.min.css": ["source/css/style.min.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
-    }
+    },
 
     imagemin: {
       images: {
@@ -71,7 +69,7 @@ module.exports = function(grunt) {
           src: ["source/img/**/*.{png,jpg,svg}"]
         }]
       }
-    }
+    },
 
     cwebp: {
       images: {
@@ -83,29 +81,33 @@ module.exports = function(grunt) {
           src: ["source/img/**/*.{png,jpg}"]
         }]
       }
-    }
+    },
 
     copy: {
       build: {
         files: [{
           expand: true,
-          swd: "source",
-          src [
+          cwd: "source",
+          src: [
             "fonts/**/*.{woff,woff2}",
             "img/**",
-            "js/**"
+            "js/**",
           ],
           dest: "build"
         }]
       }
+    },
+
+    clean: {
+      build: ["build"]
     }
-
   });
-
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
 
   grunt.registerTask("build", [
+    "clean",
+    "copy",
     "less",
     "postcss",
     "csso",
