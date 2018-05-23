@@ -24,10 +24,7 @@ module.exports = function(grunt) {
     browserSync: {
       server: {
         bsFiles: {
-          src: [
-            "build/*.html",
-            "build/css/*.css"
-          ]
+          src: ["build/*.html", "build/css/*.css"]
         },
         options: {
           server: "build/",
@@ -55,6 +52,32 @@ module.exports = function(grunt) {
         files: {
           "build/css/style.min.css": ["build/css/style.css"]
         }
+      }
+    },
+
+    svgstore: {
+      options: {
+        includeTitleElement: false
+      },
+      sprite: {
+        files: {
+          "build/img/sprite.svg": ["source/img/sprite-*.svg"]
+        }
+      }
+    },
+
+    posthtml: {
+      options: {
+        use: [
+          require("posthtml-include")()
+        ]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["source/*.html"]
+          dest: "build"
+        }]
       }
     },
 
@@ -111,5 +134,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
+    "svgstore",
+    "posthtml"
   ]);
 };

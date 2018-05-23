@@ -150,11 +150,9 @@
   margin-right: 13px;
 }
 
-path {
-  fill: #5c6870;
-}
-
-polygon {
+.commercial__image-replay,
+.commercial__image-subtitles,
+.commercial__image-fullscreen {
   fill: #5c6870;
 }
 
@@ -165,25 +163,12 @@ polygon {
 }
 
 .commercial__scrolling-button:hover {
-  path {
-    fill: #333333;
-  }
-
-  polygon {
-    fill: #333333;
-  }
+  fill: #333333;
 }
 
 .commercial__scrolling-button:active {
-  path {
-    fill: #b8b8b8;
-  }
-
-  polygon {
-    fill: #b8b8b8;
-  }
+  fill: #b8b8b8;
 }
-
 
 @media (max-width: @mobile-width-only) {
   .commercial__text br {
@@ -280,11 +265,9 @@ polygon {
     z-index: 1;
   }
 
-  path {
-    fill: #ffffff;
-  }
-
-  polygon {
+  .commercial__image-replay,
+  .commercial__image-subtitles,
+  .commercial__image-fullscreen {
     fill: #ffffff;
   }
 
@@ -294,23 +277,11 @@ polygon {
   }
 
   .commercial__scrolling-button:hover {
-    path {
-      fill: #c2c2c2;
-    }
-
-    polygon {
-      fill: #c2c2c2;
-    }
+    fill: #c2c2c2;
   }
 
   .commercial__scrolling-button:active {
-    path {
-      fill: #949494;
-    }
-
-    polygon {
-      fill: #949494;
-    }
+    fill: #949494;
   }
 }
 
