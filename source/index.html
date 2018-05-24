@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script defer src="js/picturefill.min.js"></script>
+  <script defer src="js/svgxuse.min.js"></script>
 </head>
 <body>
   <div class="page-container">
     <header class="page-header">
-      <nav class="main-nav main-nav--opened-simple">
+      <nav class="main-nav main-nav--opened-simple"><!--Для реализации с JS классы main-nav--opened main-nav--closed-->
         <a class="logo logo__link">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
@@ -109,7 +111,7 @@
         <div class="commercial__content">
           <h2 class="commercial__title">Заинтересовались?</h2>
           <p class="commercial__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="button commercial__link" href="#">Найти гостиницу</a>
+          <a class="button commercial__link" href="search.html">Найти гостиницу</a>
         </div>
         <div class="commercial__map"><span class="visually-hidden">Карта, на которой указано местоположение Седоны</span>
           <iframe class="commercial__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.1805059477!2d-111.83015783952044!3d34.85437338107749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1526900222351" width="1200" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
@@ -142,8 +144,8 @@
         </li>
       </ul>
       <div class="copyright">
-        <p class="copyright__content">Разработано</p>
         <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="copyright__content">Разработано</p>
           <svg width="26.943px" height="34.09px"><use xlink:href="img/sprite.svg#sprite-logo-htmlacademy"></use></svg>
         </a>
       </div>

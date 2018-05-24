@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script defer src="js/picturefill.min.js"></script>
+  <script defer src="js/svgxuse.min.js"></script>
 </head>
 <body>
   <div class="page-container">
@@ -65,14 +67,14 @@
                 </div>
               </fieldset>
             </div>
-            <div class="form__wrapper">
+            <div class="form__wrapper form__wrapper--contacts">
               <fieldset class="form__group form__group--contacts">
                 <legend class="form__group-heading">Контактная информация:</legend>
                   <div class="form__group-wrapper">
                     <ul class="form__group-list">
                       <li class="form__group-item form__item-contacts">
                         <label class="form__group-title form__title-phone" for="phone-number"><span>Контактный</span> телефон*:</label>
-                        <input class="form__field form__field-phone" id="phone-number" name="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" required="">
+                        <input class="form__field form__field-phone" id="phone-number" name="tel" type="tel" pattern="[0-9]{10}" placeholder="Введите телефон" required="">
                         </li>
                         <li class="form__group-item form__item-contacts">
                           <label class="form__group-title form__title-email" for="email">Электронная почта*:</label>
@@ -103,7 +105,7 @@
                 </div>
               </fieldset>
             </div>
-            <div class="form__wrapper">
+            <div class="form__wrapper form__wrapper--attractions">
               <fieldset class="form__group form__group--attractions">
                 <legend class="form__group-heading">Посещенные достопримечательности:</legend>
                   <div class="form__group-wrapper">
@@ -166,8 +168,8 @@
         </li>
       </ul>
       <div class="copyright">
-        <p class="copyright__content">Разработано</p>
         <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="copyright__content">Разработано</p>
           <svg width="26.943px" height="34.09px"><use xlink:href="img/sprite.svg#sprite-logo-htmlacademy"></use></svg>
         </a>
       </div>

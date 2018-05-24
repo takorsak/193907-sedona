@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script defer src="js/picturefill.min.js"></script>
+  <script defer src="js/svgxuse.min.js"></script>
 </head>
 <body>
   <div class="page-container">
@@ -44,7 +46,7 @@
         </div>
         <div class="photo__wrapper">
           <div class="promo-photo promo-photo--first">
-            <a class="promo-photo__link" href="#">
+            <a class="promo-photo__link" href="img/photo-sunset-desktop@1x.jpg">
               <picture class="promo-photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg">
@@ -63,7 +65,7 @@
             </div>
           </div>
           <div class="promo-photo">
-            <a class="promo-photo__link" href="#">
+            <a class="promo-photo__link" href="img/photo-cactus-desktop@1x.jpg">
               <picture class="promo-photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg, img/photo-cactus-tablet@2x.jpg">
@@ -82,7 +84,7 @@
             </div>
           </div>
           <div class="promo-photo">
-            <a class="promo-photo__link" href="#">
+            <a class="promo-photo__link" href="img/photo-roads-desktop@1x.jpg">
               <picture class="promo-photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg, img/photo-roads-tablet@2x.jpg">
@@ -101,7 +103,7 @@
             </div>
           </div>
           <div class="promo-photo">
-            <a class="promo-photo__link" href="#">
+            <a class="promo-photo__link" href="img/photo-bridge-desktop@1x.jpg">
               <picture class="promo-photo__image">
                 <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg">
                 <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg">
@@ -127,26 +129,28 @@
             <h2 class="commercial__title">Все еще сомневаетесь?</h2>
             <p class="commercial__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           </div>
-          <picture class="commercial__video">
-            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg">
-            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg" alt="Видео">
-          </picture>
-          <div class="commercial__scrolling">
-            <div class="commercial__scrolling-slider">
-              <div class="commercial__scrolling-toggle"></div>
+          <div class="commercial__video-block">
+            <picture class="commercial__video">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg" alt="Видео">
+            </picture>
+            <div class="commercial__scrolling">
+              <div class="commercial__scrolling-slider">
+                <div class="commercial__scrolling-toggle"></div>
+              </div>
             </div>
-          </div>
-          <div class="commercial__scrolling-images">
-            <button class="commercial__scrolling-button" type="button">
-              <svg class="commercial__image-replay" width="16px" height="20px"><use xlink:href="img/sprite.svg#sprite-icon-video-replay"></use></svg>
-            </button>
-            <button class="commercial__scrolling-button" type="button">
-              <svg class="commercial__image-subtitles" width="32px" height="20px"><use xlink:href="img/sprite.svg#sprite-icon-video-subtitles"></use></svg>
-            </button>
-            <button class="commercial__scrolling-button" type="button">
-              <svg class="commercial__image-fullscreen" width="20px" height="20px"><use xlink:href="img/sprite.svg#sprite-icon-video-fullscreen"></use></svg>
-            </button>
+            <div class="commercial__scrolling-images">
+              <button class="commercial__scrolling-button" type="button">
+                <svg class="commercial__image-replay" width="16px" height="20px"><use xlink:href="img/sprite.svg#sprite-icon-video-replay"></use></svg>
+              </button>
+              <button class="commercial__scrolling-button" type="button">
+                <svg class="commercial__image-subtitles" width="32px" height="20px"><use xlink:href="img/sprite.svg#sprite-icon-video-subtitles"></use></svg>
+              </button>
+              <button class="commercial__scrolling-button" type="button">
+                <svg class="commercial__image-fullscreen" width="20px" height="20px"><use xlink:href="img/sprite.svg#sprite-icon-video-fullscreen"></use></svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -177,9 +181,9 @@
         </li>
       </ul>
       <div class="copyright">
-        <p class="copyright__content">Разработано</p>
         <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="26.943px" height="34.09px"><use xlink:href="img/sprite.svg#ite-logo-htmlacademy"></use></svg>
+          <p class="copyright__content">Разработано</p>
+          <svg width="26.943px" height="34.09px"><use xlink:href="img/sprite.svg#sprite-logo-htmlacademy"></use></svg>
         </a>
       </div>
     </footer>
