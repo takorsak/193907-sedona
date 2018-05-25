@@ -149,14 +149,17 @@
   line-height: @placeholder-line-height;
   font-weight: 700;
   color: @text-dark;
-
   margin: 0;
   padding: 14px 20px;
   border: 0;
   outline: none;
   background-color: @semi-dark;
   display: block;
-  .form__field()
+}
+
+.form__field::placeholder {
+  color: @text-dark;
+  opacity: 1;
 }
 
 .form__field-name {
@@ -787,10 +790,11 @@
   }
 
   .form__field-phone {
-    padding-top: 17px;
-    padding-bottom: 16px;
+    padding-top: 18px;
+    padding-bottom: 17px;
     width: 300px;
     margin-left: 18px;
+    line-height: 1.26;
   }
 
   .form__field-email {
@@ -799,6 +803,7 @@
     margin-bottom: 0;
     width: 300px;
     margin-left: 18px;
+    line-height: 1.26;
   }
 
 
