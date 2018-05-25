@@ -148,17 +148,23 @@
   font-size: @placeholder-font-size;
   line-height: @placeholder-line-height;
   font-weight: 700;
-
+  color: @text-dark;
   margin: 0;
   padding: 14px 20px;
-
   border: 0;
   outline: none;
   background-color: @semi-dark;
-
   display: block;
+}
 
-  .form__field()
+.form__field::placeholder {
+  color: @text-dark;
+  opacity: 1;
+}
+
+.form__field::-moz-placeholder {
+  color: @text-dark;
+  opacity: 1;
 }
 
 .form__field-name {
@@ -321,7 +327,6 @@
     margin: 0;
     padding: 0;
     width: @tablet-content-width;
-    border-top: @border;
   }
 
   .form__group--attractions {
@@ -356,17 +361,54 @@
     text-align: left;
   }
 
-  .form__group--contacts .form__group-heading,
-  .form__group--attractions .form__group-heading {
-    text-align: center;
-    width: 400px;
-    padding-right: 57px;
-    padding-left: 56px;
+  .form__wrapper--contacts {
+    border-top: @border;
+    position: relative;
+    padding-top: 37px;
+    margin-top: 13px;
+    box-sizing: border-box;
+  }
+
+  .form__wrapper--attractions {
+    border-top: @border;
+    position: relative;
+    padding-top: 23px;
+    margin-top: 25px;
   }
 
   .form__group--contacts .form__group-heading {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: block;
+    width: 400px;
+    height: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border: 0;
     margin-bottom: 25px;
+  }
+
+  .form__group--attractions .form__group-heading {
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: block;
+    width: 400px;
+    height: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border: 0;
+  }
+
+  .form__group--contacts .form__group-heading,
+  .form__group--attractions .form__group-heading {
+    padding-right: 57px;
+    padding-left: 56px;
   }
 
   .form__group--name .form__group-heading,
@@ -545,20 +587,34 @@
 
   .form__group--name,
   .form__group--impression {
-    width: 479px;
+    width: 478px;
   }
 
   .form__group--name {
     padding-left: 80px;
   }
 
+  .form__group--contacts,
+  .form__group--attractions {
+    width: 960px;
+  }
+
   .form__group--attractions .form__group-wrapper {
     margin-bottom: 0;
   }
 
+  .form__wrapper--contacts {
+    padding-top: 85px;
+    margin-top: 9px;
+  }
+
+  .form__wrapper--attractions {
+    padding-top: 23px;
+    margin-top: 29px;
+  }
 
   .form__group--contacts .form__group-heading {
-    margin-bottom: 73px;
+    top: -15px;
   }
 
   .form__group--impression .form__group-heading {
@@ -580,7 +636,7 @@
   .form__inner .form__group-heading {
     position: absolute;
     top: 1422px;
-    left: 50.8%;
+    left: 50%;
     transform: translateX(-50%);
 
     display: block;
@@ -621,10 +677,8 @@
 
   .form__title-phone,
   .form__title-email {
-    margin: 0;
-    margin-right: 18px;
     padding-top: 18px;
-    padding-bottom: 15px;
+    margin: 0;
   }
 
   .form__title-phone::after {
@@ -724,21 +778,37 @@
   }
 
   .form__field {
-    width: 315px;
     box-sizing: border-box;
   }
 
-  .form__field-phone {
-    padding-top: 17px;
-    padding-bottom: 16px;
+  .form__field-name {
+    width: 350px;
+    box-sizing: border-box;
+  }
+
+  .form__field-sername {
+    width: 312px;
+  }
+
+  .form__field-patronym {
     width: 315px;
+  }
+
+  .form__field-phone {
+    padding-top: 18px;
+    padding-bottom: 17px;
+    width: 300px;
+    margin-left: 18px;
+    line-height: 1.26;
   }
 
   .form__field-email {
     padding-top: 17px;
     padding-bottom: 16px;
     margin-bottom: 0;
-    width: 315px;
+    width: 300px;
+    margin-left: 18px;
+    line-height: 1.26;
   }
 
 

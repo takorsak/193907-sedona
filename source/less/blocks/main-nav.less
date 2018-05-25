@@ -27,7 +27,7 @@
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    min-height: 280px;
+    min-height: 56px;
     width: 320px;
     margin: 0 auto;
   }
@@ -111,8 +111,17 @@
     display: block;
   }
 
+  .main-nav .main-nav__item {
+    display: none;
+  }
+
   .main-nav--opened-simple .main-nav__item {
     display: block;
+  }
+
+  .main-nav.main-nav--opened,
+  .main-nav.main-nav--opened-simple {
+    min-height: 280px;
   }
 }
 

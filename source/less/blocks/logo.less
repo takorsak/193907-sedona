@@ -1,7 +1,7 @@
 .logo {
   position: absolute;
 
-  top: 224px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 
@@ -15,8 +15,14 @@
   top: 0;
 }
 
+.main-nav--opened .logo,
+.main-nav--opened-simple .logo {
+  top: 224px;
+}
+
 @media (min-width: @tablet-width) {
-  .logo {
+  .logo,
+  .main-nav--opened-simple .logo {
     top: 0;
     height: 93px;
   }
