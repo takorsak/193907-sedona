@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/PTSans.woff2" as="font">
+  <link rel="preload" href="fonts/PTSansBold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script defer src="js/picturefill.min.js"></script>
   <script defer src="js/svgxuse.min.js"></script>
@@ -22,7 +25,7 @@
         <button class="main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="photo.html">Фото и видео</a>
@@ -50,8 +53,11 @@
             <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <picture class="reason__image reason__image-order">
-            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@2x.webp 2x, img/main-city-desktop@1x.webp 1x">
+            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@2x.jpg 2x, img/main-city-desktop@1x.jpg 1x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@2x.webp 2x, img/main-city-tablet@1x.webp 1x">
+            <source media="(min-width: 768px)" srcset="img/main-city-tablet@2x.jpg 2x, img/main-city-tablet@1x.jpg 1x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/main-city-mobile@2x.webp 2x, img/main-city-mobile@1x.webp 1x">
             <img src="img/main-city-mobile@2x.jpg" srcset="img/main-city-mobile@1x.jpg" alt="Вид на классический мотель Дикого Запада">
           </picture>
         </div>
@@ -78,8 +84,11 @@
             <p class="reason__text">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
           </div>
           <picture class="reason__image">
-            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@2x.webp 2x, img/main-bridge-desktop@1x.webp 1x">
+            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@2x.jpg 2x, img/main-bridge-desktop@1x.jpg 1x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@2x.webp 2x, img/main-bridge-tablet@1x.webp 1x">
+            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@2x.jpg 2x, img/main-bridge-tablet@1x.jpg 1x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/main-bridge-mobile@2x.webp 2x, img/main-bridge-mobile@1x.webp 1x">
             <img src="img/main-bridge-mobile@2x.jpg" srcset="img/main-bridge-mobile@1x.jpg" alt="Узкий каменный мостик над живописной пропастью">
           </picture>
         </div>
@@ -123,23 +132,20 @@
       <ul class="social">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="#">
-            <div class="social__image">
-              <span class="visually-hidden">Твиттер</span>
-            </div>
+            <svg class="social__image" width="17.5px" height="14.663px"><use xlink:href="img/sprite.svg#sprite-icon-twitter"></use></svg>
+            <span class="visually-hidden">Твиттер</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--fb" href="#">
-            <div class="social__image">
-              <span class="visually-hidden">Фэйсбук</span>
-            </div>
+            <svg class="social__image" width="8.672px" height="18.944px"><use xlink:href="img/sprite.svg#sprite-icon-facebook"></use></svg>
+            <span class="visually-hidden">Фэйсбук</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="#">
-            <div class="social__image">
-              <span class="visually-hidden">Ютюб</span>
-            </div>
+            <svg class="social__image" width="19.979px" height="14.015px"><use xlink:href="img/sprite.svg#sprite-icon-youtube"></use></svg>
+            <span class="visually-hidden">Ютюб</span>
           </a>
         </li>
       </ul>
