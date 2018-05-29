@@ -144,21 +144,32 @@
   width: 280px;
   height: 67px;
   background-color: #f2f2f2;
-  padding-left: 23px;
-  padding-right: 20px;
+  padding-left: 20px;
   padding-top: 21px;
   box-sizing: border-box;
 }
 
 .commercial__image-subtitles {
-  margin-left: 112px;
-  margin-right: 13px;
+  margin-left: 115px;
+  margin-right: 15px;
 }
 
-.commercial__image-replay,
-.commercial__image-subtitles,
-.commercial__image-fullscreen {
+.commercial__scrolling-button .commercial__image-replay,
+.commercial__scrolling-button .commercial__image-subtitles,
+.commercial__scrolling-button .commercial__image-fullscreen {
   fill: #5c6870;
+}
+
+.commercial__scrolling-button:hover .commercial__image-replay,
+.commercial__scrolling-button:hover .commercial__image-subtitles,
+.commercial__scrolling-button:hover .commercial__image-fullscreen {
+  fill: #333333;
+}
+
+.commercial__scrolling-button:active .commercial__image-replay,
+.commercial__scrolling-button:active .commercial__image-subtitles,
+.commercial__scrolling-button:active .commercial__image-fullscreen {
+  fill: #b8b8b8;
 }
 
 .commercial__scrolling-button {
@@ -273,10 +284,22 @@
     z-index: 1;
   }
 
-  .commercial__image-replay,
-  .commercial__image-subtitles,
-  .commercial__image-fullscreen {
+  .commercial__scrolling-button .commercial__image-replay,
+  .commercial__scrolling-button .commercial__image-subtitles,
+  .commercial__scrolling-button .commercial__image-fullscreen {
     fill: #ffffff;
+  }
+
+  .commercial__scrolling-button:hover .commercial__image-replay,
+  .commercial__scrolling-button:hover .commercial__image-subtitles,
+  .commercial__scrolling-button:hover .commercial__image-fullscreen {
+    fill: #c2c2c2;
+  }
+
+  .commercial__scrolling-button:active .commercial__image-replay,
+  .commercial__scrolling-button:active .commercial__image-subtitles,
+  .commercial__scrolling-button:active .commercial__image-fullscreen {
+    fill: #949494;
   }
 
   .commercial__image-subtitles {

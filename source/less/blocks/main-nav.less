@@ -38,6 +38,18 @@
     width: 320px;
   }
 
+  .main-nav__item:hover {
+    background-color: @darker-info;
+  }
+
+  .main-nav__item:active {
+    background-color: @darkest-info;
+  }
+
+  .main-nav__item:active .main-nav__link {
+    color: @text-dark-info;
+  }
+
   .main-nav__item {
     border-top: 1px solid #9ac2db;
     border-bottom: 1px solid #678fa8;
@@ -136,6 +148,26 @@
     font-size: 14px;
     line-height: 26px;
     display: block;
+  }
+
+  .main-nav__link:hover {
+    color: #81b3d2;
+  }
+
+  .main-nav__link:active {
+    color: #b2b2b2;
+  }
+
+  .main-nav__link--current {
+    color: #766357;
+  }
+
+  .main-nav__link--current:hover {
+    color: #604e43;
+  }
+
+  .main-nav__link--current:active {
+    color: #d6d0cc;
   }
 
   .main-nav__item:nth-child(1) .main-nav__link {
